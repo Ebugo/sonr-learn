@@ -1,0 +1,126 @@
+.bigNav {
+  z-index: 100000;
+  background: var(--app-white);
+  width: 100%;
+  height: 102px;
+  /* box-shadow: rgba(204, 52, 38, 0.247) 0px 8px 24px; */
+}
+
+.bigNav *:not(svg) {
+  height: 100%;
+}
+
+.logo-container {
+  position: relative;
+}
+
+.bigNav .logo-container svg {
+  position: absolute;
+  top: -100%;
+  left: -60px;
+  height: 1000px !important;
+}
+
+.bigNavLinks {
+  /* border-left: 1px solid var(--app-gray-200); */
+}
+
+.bigNavLinks ul {
+  display: flex;
+}
+
+.bigNavLinks ul li,
+.bigNavLinks button {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.bigNavLinks a,
+.smallNavLinks a,
+.bigNav button,
+.bigNav button span,
+.mobileList button,
+.mobileList button span {
+  height: fit-content;
+}
+
+.bigNavLinks li {
+  margin: 0 30px;
+}
+
+.bigNavLinks li a {
+  color: var(--app-black-400);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.bigNavLinks li.active a {
+  color: var(--app-blue-400);
+}
+
+.bigNavLinks li.active hr {
+  width: 21px;
+  height: 2px;
+  background-color: var(--app-blue-400);
+  border: none;
+}
+
+.smallNavLinks li hr, .bigNavLinks li hr {
+  background-color: transparent;
+  border-bottom: 2px solid transparent;
+}
+
+.smallNavLinks li a {
+  color: var(--app-white);
+}
+
+.smallNavLinks li.active hr {
+  width: 21px;
+  height: 2px;
+  background-color: var(--app-white);
+  border: none;
+}
+
+.bigNav button {
+  font-size: 0.875rem;
+}
+
+.mobileList {
+  z-index: 3000;
+  animation: slideIn 0.2s linear;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileList li {
+  height: 60px !important;
+  font-size: 1.5rem;
+}
+
+.close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  right: 15px;
+}
+
+@keyframes slideIn {
+  0% {
+    width: 0px;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .bigNav .logo-container svg {
+    position: absolute;
+    top: -100%;
+    left: -90px;
+    height: 1000px !important;
+  }
+}

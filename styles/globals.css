@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+  --app-gray-100: #e5e5e5;
+  --app-grey-100: #f4f4f4;
+  --app-black-100: #424141;
+  --app-black-400: #0e040c;
+  --app-blue-100: #55ceff;
+  --app-blue-400: #1792ff;
+  --app-green-400: #0f6664;
+  --app-white: #ffffff;
+  --app-primary-font: "Josefin Sans", "sans-serif";
+  --app-border-radius-sm: 10px;
+  --app-border-radius-md: 20.9836px;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--app-primary-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--app-primary-font);
+  font-weight: 600;
+}
+
+p,
+span {
+  font-weight: 400;
+}
