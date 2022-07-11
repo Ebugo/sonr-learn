@@ -1,8 +1,8 @@
-.container {
+.tutorial-detail-container {
   /*overflow-x: hidden;*/
 }
 
-.container h1 {
+.tutorial-detail-container h1 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-weight: 800;
@@ -10,7 +10,7 @@
   color: var(--app-black-500);
 }
 
-.container h2 {
+.tutorial-detail-container h2 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-weight: 800;
@@ -18,7 +18,7 @@
   color: var(--app-blue-600);
 }
 
-.container h6 {
+.tutorial-detail-container h6 {
   /*font-size: 1.25rem;*/
   line-height: 1.5rem;
   font-weight: 800;
@@ -26,17 +26,17 @@
   color: var(--app-black-500);
 }
 
-.container p {
+.tutorial-detail-container p {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
 }
 
-.container span.sub-text {
+.tutorial-detail-container span.sub-text {
   color: var(--app-grey-200);
 }
 
-.container .description .avatar {
+.tutorial-detail-container .description .avatar {
   color: var(--app-white);
   background: radial-gradient(77.08% 77.08% at 15.83% 16.25%, #69CEBD 8.33%, #14B69A 34.37%, #009C82 81.77%);
   border: 1px solid var(--app-white);
@@ -48,88 +48,88 @@
   justify-content: center;
 }
 
-.container .description span:first-child {
+.tutorial-detail-container .description span:first-child {
   border-right: 1px solid var(--app-gray-200);
 }
 
-.container .reference {
+.tutorial-detail-container .reference {
   background: var(--app-blue-200);
   box-shadow: 0px 4px 8px -4px rgba(22, 34, 51, 0.12), 0px 16px 20px rgba(22, 34, 51, 0.08);
   border-radius: 5px;
 }
 
-.container .reference h5 {
+.tutorial-detail-container .reference h5 {
   font-family: var(--app-primary-font-bold);
   font-weight: 800;
   color: var(--app-gray-200);
 }
 
-.container .reference a {
+.tutorial-detail-container .reference a {
   color: var(--app-black-500);
 }
 
-.container .reference a:first-child, .container .reference a:first-child * {
+.tutorial-detail-container .reference a:first-child, .tutorial-detail-container .reference a:first-child * {
   font-family: var(--app-primary-font-bold);
   font-weight: 800;
   color: var(--app-blue-600);
 }
 
-.container .reference hr {
+.tutorial-detail-container .reference hr {
   background: var(--app-gray-200);
   height: 1px;
   border: none;
 }
 
-.container .image-container {
+.tutorial-detail-container .image-tutorial-detail-container {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.container .highlight-text {
+.tutorial-detail-container .highlight-text {
   border-left: 7px solid var(--app-blue-600);
   border-radius: 3px;
   background: var(--app-blue-200);
 }
 
 @media all and (min-width: 768px) {
-  .container {
+  .tutorial-detail-container {
     display: flex;
   }
 
-  .container h1, .container h2 {
+  .tutorial-detail-container h1, .tutorial-detail-container h2 {
     font-size: 1.35rem;
     line-height: 1.5rem;
   }
 
-  .container p {
+  .tutorial-detail-container p {
     font-size: 1.05rem;
     line-height: 1.5rem;
   }
 
-  .container section:first-child {
+  .tutorial-detail-container section:first-child {
     width: 63.33%;
   }
 }
 
 @media all and (min-width: 992px) {
-  .container h1, .container h2 {
+  .tutorial-detail-container h1, .tutorial-detail-container h2 {
     font-size: 1.5rem;
     line-height: 1.5rem;
   }
 
-  .container p {
+  .tutorial-detail-container p {
     font-size: 1.1rem;
     line-height: 2rem;
   }
 }
 
 @media all and (min-width: 1024px) {
-  .container h1, .container h2 {
+  .tutorial-detail-container h1, .tutorial-detail-container h2 {
     font-size: 1.75rem;
     line-height: 1.75rem;
   }
 
-  .container p {
+  .tutorial-detail-container p {
     font-size: 1.15rem;
     line-height: 2.2rem;
   }

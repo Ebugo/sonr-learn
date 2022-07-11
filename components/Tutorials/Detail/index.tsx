@@ -9,7 +9,7 @@ import {Tag} from "../../Shared/Tag";
 
 const TutorialsDetail = () => {
 	return (
-		<div className={styles["container"]}>
+		<div className={styles["tutorial-detail-container"]}>
 			<section className="pt-4">
 				<div className="flex flex-wrap gap-3 w-full mb-2">
 					<Tag text="Consensus Mechanism" color="primary" />
