@@ -1,3 +1,5 @@
+{/* eslint-disable @next/next/no-html-link-for-pages */}
+
 import styles from './styles.module.css';
 import {Image} from "../../Shared";
 import {CodeBlock, Link, Rating, TutorialAccess} from "../../../assets";
@@ -70,20 +72,20 @@ const TutorialsDetail = () => {
 					<hr className="mt-2 mb-5 md:mb-8"/>
 
 					<div className="flex flex-col mb-5">
-						<Link href="/tutorials/1#initial" className="my-1 flex">
+						<a href="/tutorials/1#initial" className="my-1 flex">
 							<Link />
 							<span className="ml-2">Initial Setup</span>
-						</Link>
-						<Link href="#" className="my-1 ml-8">Sign up to sonr beam</Link>
-						<Link href="#" className="my-1 ml-8">Download packages</Link>
+						</a>
+						<a href="#" className="my-1 ml-8">Sign up to sonr beam</a>
+						<a href="#" className="my-1 ml-8">Download packages</a>
 					</div>
 					<div className="flex flex-col mb-5">
-						<Link href="/tutorials/1#run" className="my-1 flex">
+						<a href="/tutorials/1#run" className="my-1 flex">
 							<Link />
 							<span className="ml-2">Running a Hello World Testnet</span>
-						</Link>
-						<Link href="#" className="my-1 ml-8">Sign up to sonr beam</Link>
-						<Link href="#" className="my-1 ml-8">Download packages</Link>
+						</a>
+						<a href="#" className="my-1 ml-8">Sign up to sonr beam</a>
+						<a href="#" className="my-1 ml-8">Download packages</a>
 					</div>
 				</div>
 			</section>
