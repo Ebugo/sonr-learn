@@ -1,5 +1,5 @@
 import React from "react";
-import NextImage from "next/image";
+import NextImage, {StaticImageData} from "next/image";
 
 type ComponentProps = {
   src: string | StaticImageData;
