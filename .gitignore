@@ -39,4 +39,4 @@ yarn-error.log*
 *.lock
 package-lock.json
 
-.idea
+/.idea

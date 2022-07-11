@@ -1,11 +1,12 @@
 import Head from 'next/head';
 import { ReactComponentElement } from 'react';
 import { Footer, Header } from '..';
+import styles from './styles.module.css';
 
 
 const AppLayout = ({ children }: { children: ReactComponentElement<any> }) => {
 	return (
-		<div>
+		<div className={styles["wrapper"]}>
 			<Head>
 				<link rel="icon" href="./favicon.svg" />
 				<meta
@@ -16,11 +17,11 @@ const AppLayout = ({ children }: { children: ReactComponentElement<any> }) => {
 				<meta name="description" content="Sonr Learn" />
 				<meta name="keywords" content="Sonr Learn"></meta>
 			</Head>
-			{/*<Header />*/}
-			<main className={`mb-8 container pt-24 md:pt-0 md:px-16 lg:px-28 xl:px-32 min-h-screen`}>
+			<Header />
+			<main className={`${styles["container"]} container pt-10 md:pt-14 md:px-16 lg:px-28`}>
 				{children}
 			</main>
-			{/*<Footer />*/}
+			<Footer />
 		</div >
 	);
 };

@@ -12,7 +12,7 @@ const Error: NextPage = () => {
 				<Head>
 					<title>Sonr Learn | Page not found</title>
 				</Head>
-				<section className={`${styles["error-container"]} flex flex-col items-center justify-center h-full`}>
+				<section className={`${styles["error-container"]} flex flex-col items-center justify-center h-96`}>
 					<h3 className="">Page not found!</h3>
 
 					<div className="mt-10">

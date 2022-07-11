@@ -1,20 +1,24 @@
 .container {
-  overflow-x: hidden;
 }
 
 .container h1 {
-  font-size: 2rem;
-  line-height: 2.4rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
 }
 
 .container h2 {
-  font-size: 1.75rem;
-  line-height: 2.43rem;
+  font-size: 1.35rem;
+  line-height: 1.5rem;
 }
 
 .container h3 {
-  font-size: 1.75rem;
-  line-height: 2.18rem;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 800;
+  font-family: var(--app-primary-font-bold);
 }
 
 .container P {
@@ -23,64 +27,168 @@
   font-weight: 400;
 }
 
+.container .banner {
+  background: linear-gradient(150.31deg, #1792FF 9.54%, #0053B5 97.47%);
+  border-radius: 15px;
+  min-height: 282px;
+}
+
+.container .banner div:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.container .banner div:first-child button {
+  width: fit-content;
+}
+
+.container .banner div:last-child {
+  right: -105px;
+  bottom: -220px;
+  transform: scale(0.5) translate(280px, 3px);
+}
+
+.container .banner button {
+  color: var(--app-black-500);
+  background: var(--app-blue-200);
+}
+
+.container .latest-tutorial {
+  border-radius: 15px;
+  background: var(--app-white);
+  max-height: 417px;
+}
+
+.container .latest-tutorial > div:first-child span {
+  height: 100% !important;
+  border-radius: 15px;
+}
+
+.container .latest-tutorial div:last-child div:last-child {
+}
+
+.container .latest-tutorial span {
+
+}
+
+.container span.sub-text {
+  color: var(--app-grey-200);
+}
+
+.container .latest-tutorial .description .avatar {
+  color: var(--app-white);
+  background: radial-gradient(77.08% 77.08% at 15.83% 16.25%, #69CEBD 8.33%, #14B69A 34.37%, #009C82 81.77%);
+  border: 1px solid var(--app-white);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .latest-tutorial .arrow-container {
+  background: var(--app-blue-500);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 12px -4px rgba(22, 34, 51, 0.12);
+  filter: drop-shadow(0px 16px 32px rgba(22, 34, 51, 0.16));
+  cursor: pointer;
+}
+
+.container hr {
+  height: 1px;
+  background: #AEACB8;
+  border-radius: 1px;
+}
+
+.container .tutorials-container button {
+  width: fit-content;
+}
+
 @media all and (min-width: 768px) {
   .container h1 {
-    font-size: 3.6rem;
-    line-height: 3.6rem;
+    font-size: 1.65rem;
+    line-height: 1.75rem;
   }
 
   .container h2 {
-    font-size: 3rem;
-    line-height: 3rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
   }
 
   .container h3 {
-    font-size: 2.4rem;
-    line-height: 2.6rem;
+    font-size: 1.35rem;
+    line-height: 1.5rem;
   }
 
   .container P {
     font-size: 0.875rem;
     line-height: 1.5rem;
   }
+
+  .container .latest-tutorial > div:first-child {
+    width: 45.9%;
+  }
+
+  .container .latest-tutorial > div:first-child span {
+    height: 100% !important;
+    border-radius: 15px 0 0 15px;
+  }
+
+  .container .tutorials-container > h3 {
+    width: 56.32%;
+  }
+
+  .container .banner div:last-child {
+    transform: scale(0.6) translate(185px, 3px);
+  }
 }
 
 @media all and (min-width: 992px) {
   .container h1 {
-    font-size: 3.9rem;
-    line-height: 3.9rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
 
   .container h2 {
-    font-size: 3.2rem;
-    line-height: 3.2rem;
+    font-size: 1.65rem;
+    line-height: 1.6rem;
   }
 
   .container h3 {
-    font-size: 2.6rem;
-    line-height: 2.8rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
   }
 
   .container p {
     font-size: 1rem;
     line-height: 2rem;
   }
+
+  .container .banner div:last-child {
+    transform: scale(0.75) translate(100px, 3px);
+  }
 }
 
 @media all and (min-width: 1024px) {
   .container h1 {
-    font-size: 3.6rem;
-    line-height: 4rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
 
   .container h2 {
-    font-size: 3.6rem;
-    line-height: 4rem;
+    font-size: 1.85rem;
+    line-height: 1.75rem;
   }
 
   .container h3 {
-    font-size: 3rem;
-    line-height: 4rem;
+    font-size: 1.75rem;
+    line-height: 1.75rem;
   }
 
   .container p {
@@ -89,5 +197,8 @@
   }
 }
 
-@media all and (max-width: 767px) {
+@media all and (min-width: 1200px){
+  .container .banner div:last-child {
+    transform: none;
+  }
 }
