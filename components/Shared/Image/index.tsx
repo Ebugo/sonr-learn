@@ -32,7 +32,7 @@ function Image({
       width={width}
       height={height}
       placeholder="blur"
-      blurDataURL={blurDataURL || src.blurDataURL || ""}
+      blurDataURL={typeof src === "string" ? src : ("blurDataURL" in src && src?.blurDataURL) || ""}
     />
   );
 }

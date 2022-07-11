@@ -1,7 +1,7 @@
 import React, { useState, SyntheticEvent, FormEvent, ChangeEvent } from "react";
 import styles from "./styles.module.css";
 import { FormikProps } from "formik";
-import { Eye, Email, EyeClosed } from "../../../assets/index";
+// import { Eye, Email, EyeClosed } from "../../../assets";
 
 type InputType = {
 	type?: string;
@@ -100,16 +100,16 @@ function Input({
 				{...rest}
 				placeholder={placeholder}
 			/>
-			{type === "password" && (
-				<span className="cursor-pointer" onClick={handleClick}>
-					{inputType === "password" ? <Eye /> : <EyeClosed />}
-				</span>
-			)}
-			{type === "email" && (
-				<span>
-					<Email />
-				</span>
-			)}
+			{/*{type === "password" && (*/}
+			{/*	<span className="cursor-pointer" onClick={handleClick}>*/}
+			{/*		{inputType === "password" ? <Eye /> : <EyeClosed />}*/}
+			{/*	</span>*/}
+			{/*)}*/}
+			{/*{type === "email" && (*/}
+			{/*	<span>*/}
+			{/*		<Email />*/}
+			{/*	</span>*/}
+			{/*)}*/}
 			{Icon ? <Icon className={`${styles.icon}`} /> : ""}
 			{(error || status) && <div className={`${styles["error-message"]}`}>{error || status}</div>}
 		</div>
