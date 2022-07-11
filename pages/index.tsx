@@ -8,6 +8,7 @@ import {tutorials, events} from "../data";
 import {EventCard} from "../components/Shared/EventCard";
 import React from "react";
 import {useRouter} from "next/router";
+import {Tag} from "../components/Shared/Tag";
 
 
 const Home: NextPage = () => {
@@ -43,8 +44,13 @@ const Home: NextPage = () => {
 						</div>
 						<div className="flex-grow flex flex-col md:flex-row p-5 xl:p-16">
 							<div className="xl:pr-16 md:w-3/4 flex flex-col">
+								<div className="flex flex-wrap gap-3 w-full mb-2">
+									<Tag text="Consensus Mechanism" color="primary" />
+									<Tag text="Blockchain" color="secondary" />
+									<Tag text="Tutorial" color="tertiary" />
+								</div>
 								<h3>Building a consensus algorithm on Sonr blockchain</h3>
-                                <span className="mt-5">5mins Read</span>
+                                <span className={`mt-5 ${styles["sub-text"]}`}>5mins Read</span>
 								<div className={`${styles["description"]} mt-auto flex items-center`}>
 									<span className="flex items-center">
 										<span className={`${styles["avatar"]} mr-3`}>IP</span>

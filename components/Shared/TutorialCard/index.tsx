@@ -4,6 +4,7 @@ import React from "react";
 import styles from "./styles.module.css";
 import {Image} from "../Image";
 import {useRouter} from "next/router";
+import {Tag} from "../Tag";
 
 interface Props {
   title: string;
@@ -28,6 +29,11 @@ const TutorialCard: React.FC<Props> = ({ title, author, duration, image, tags, d
           <Image src={image} width={397} height={282.53} />
         </div>
         <div className="flex-grow flex flex-col p-5 lg:px-8 xl:px-10 md:py-6">
+            <div className="flex flex-wrap gap-3 w-full mb-2">
+                <Tag text="Consensus Mechanism" color="primary" />
+                <Tag text="Blockchain" color="secondary" />
+                <Tag text="Tutorial" color="tertiary" />
+            </div>
           <h4>{title}</h4>
           <span className="mt-5">{duration} Read</span>
           <div className={`${styles["description"]} mt-auto flex items-center`}>

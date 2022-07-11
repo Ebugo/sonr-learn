@@ -2,13 +2,19 @@ import styles from './styles.module.css';
 import {Image} from "../../Shared";
 import {CodeBlock, Link, Rating, TutorialAccess} from "../../../assets";
 import React from "react";
+import {Tag} from "../../Shared/Tag";
 
 
 const TutorialsDetail = () => {
 	return (
 		<div className={styles["container"]}>
-			<section className="">
-				<h1 className="py-4">Access and Authentication</h1>
+			<section className="pt-4">
+				<div className="flex flex-wrap gap-3 w-full mb-2">
+					<Tag text="Consensus Mechanism" color="primary" />
+					<Tag text="Blockchain" color="secondary" />
+					<Tag text="Tutorial" color="tertiary" />
+				</div>
+				<h1 className="pb-4">Access and Authentication</h1>
 				<span className={`${styles["sub-text"]}`}>5mins Read</span>
 				<div className={`${styles["description"]} mt-6 mb-3 flex items-center`}>
 					<span className="flex items-center pr-5">

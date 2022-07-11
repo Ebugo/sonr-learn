@@ -3,19 +3,23 @@
     font-size: 8px;
     line-height: 16px;
     letter-spacing: 0.02em;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.container primary {
+.container.primary {
     color: var(--app-blue-600);
-    background: var(--app-blue-300);
+    background: #B9E2FF;
 }
 
-.container secondary {
-    color: var(--app-blue-600);
-    background: var(--app-blue-300);
+.container.secondary {
+    color: #360E8C;
+    background: #E9DCFF;
 }
 
-.container tertiary {
-    color: var(--app-blue-600);
-    background: var(--app-blue-300);
+.container.tertiary {
+    color: #990831;
+    background: #FFDAE6;
 }

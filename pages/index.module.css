@@ -67,10 +67,6 @@
 .container .latest-tutorial div:last-child div:last-child {
 }
 
-.container .latest-tutorial span {
-
-}
-
 .container span.sub-text {
   color: var(--app-grey-200);
 }
