@@ -1,7 +1,6 @@
 .container {
     border-radius: 15px;
     background: var(--app-white);
-    height: 575px;
     cursor: pointer;
     max-width: 397px;
 }
@@ -22,6 +21,10 @@
     color: var(--app-grey-200);
 }
 
+.container .description * {
+    font-size: 14px;
+}
+
 .container .description .avatar {
     color: var(--app-white);
     background: radial-gradient(77.08% 77.08% at 15.83% 16.25%, #69CEBD 8.33%, #14B69A 34.37%, #009C82 81.77%);
@@ -32,4 +35,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        height: 575px;
+    }
+
+    .container .description * {
+        font-size: 16px;
+    }
 }

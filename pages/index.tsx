@@ -25,7 +25,7 @@ const Home: NextPage = () => {
 					<div className="md:w-4/6">
 						<h1>Welcome to a community oriented educational content for
 							Developers in the Sonr Ecosystem</h1>
-						<Button className="mt-10">
+						<Button className="mt-20 md:mt-10">
 							<span className="flex items-center">
 								<Star />
 								<span className="ml-2">Introduction to Decentralization</span>
@@ -78,7 +78,7 @@ const Home: NextPage = () => {
 					</div>
 					<div className="py-12">
 						<Button
-							className="px-10 mx-auto mt-8"
+							className="px-10 mx-auto md:mt-8"
 							onClick={() => push("#")}
 						>
 							<span>Show more tutorials</span>

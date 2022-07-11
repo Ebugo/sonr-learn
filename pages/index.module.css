@@ -4,7 +4,6 @@
 .container h1 {
   font-weight: 700;
   font-size: 1.5rem;
-  line-height: 1.75rem;
   letter-spacing: -0.01em;
   color: #FFFFFF;
 }
@@ -51,12 +50,16 @@
 .container .banner button {
   color: var(--app-black-500);
   background: var(--app-blue-200);
+  font-size: 14px;
+}
+
+.container .banner button svg {
+  transform: scale(0.75);
 }
 
 .container .latest-tutorial {
   border-radius: 15px;
   background: var(--app-white);
-  max-height: 417px;
 }
 
 .container .latest-tutorial > div:first-child span {
@@ -69,6 +72,10 @@
 
 .container span.sub-text {
   color: var(--app-grey-200);
+}
+
+.container .latest-tutorial .description * {
+  font-size: 14px;
 }
 
 .container .latest-tutorial .description .avatar {
@@ -86,8 +93,8 @@
 .container .latest-tutorial .arrow-container {
   background: var(--app-blue-500);
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,6 +134,19 @@
     line-height: 1.5rem;
   }
 
+  .container .banner button {
+    font-size: 16px;
+    transform: none;
+  }
+
+  .container .latest-tutorial {
+    max-height: 417px !important;
+  }
+
+  .container .latest-tutorial .description * {
+    font-size: 16px;
+  }
+
   .container .latest-tutorial > div:first-child {
     width: 45.9%;
   }
@@ -142,6 +162,11 @@
 
   .container .banner div:last-child {
     transform: scale(0.6) translate(185px, 3px);
+  }
+
+  .container .latest-tutorial .arrow-container {
+    width: 48px;
+    height: 48px;
   }
 }
 

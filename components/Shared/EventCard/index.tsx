@@ -28,14 +28,14 @@ const EventCard: React.FC<Props> = ({ title, desc, time, image, date, url = "#" 
         <div className="flex-grow flex flex-col p-5 md:px-10 md:py-6">
           <h4>{title}</h4>
           <span className="mt-1">{desc}</span>
-          <div className={`${styles["description"]} mt-5 flex items-center`}>
+          <div className={`${styles["description"]} mt-2 md:mt-5 flex items-center`}>
             <span className="flex items-center">
                 {date}
             </span>
               <span className="ml-auto">{time}</span>
           </div>
             <Button
-                className="px-10 mx-auto mt-auto ma:mt-8"
+                className="px-10 mx-auto mt-5 md:mt-auto"
                 onClick={() => push(url)}
             >
                 <span>Register for this event</span>
