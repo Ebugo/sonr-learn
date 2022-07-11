@@ -1,0 +1,83 @@
+.container {
+  background:  var(--app-blue-100);
+}
+
+.container .subscribe {
+  background-color: var(--app-blue-500);
+  background-image: url("../../assets/pngs/subscribe.png");
+  background-position: calc(100% - 17px) 100%;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  min-height: 384px;
+}
+
+.container .subscribe form > div, .container .subscribe form > button {
+  width: 100%;
+}
+
+.container input.subscribe-input::placeholder {
+  color: var(--app-grey-200);
+}
+
+.container .subscribe button {
+  background: var(--app-blue-200);
+  color: var(--app-black-400);
+}
+
+.container h4 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.container h6 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: var(--app-primary-font-bold);
+  margin-bottom: 15px;
+}
+
+.container .logo-container svg {
+  transform: scale(0.8);
+}
+
+.container li {
+  color: var(--app-gray-800);
+  font-family: var(--app-primary-font);
+  font-size: 0.875rem;
+  margin-bottom: 15px;
+}
+
+.socialLinksContainer {
+  border-top: 2px solid var(--app-gray-200);
+}
+
+@media all and (min-width: 768px) {
+  .container h4 {
+    font-size: 1.65rem;
+    line-height: 1.75rem;
+  }
+
+  .container .subscribe-input input {
+    width: 351px;
+  }
+
+  .container .subscribe form > div, .container .subscribe form > button {
+    width: fit-content;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .container h4 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .container h4 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}

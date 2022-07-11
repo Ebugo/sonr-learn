@@ -1,0 +1,54 @@
+.container {
+  background:  var(--app-blue-100);
+}
+
+.bigNav {
+  /*box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;*/
+}
+
+.bigNavLinks {
+  border-left: 1px solid var(--app-gray-200);
+}
+
+.bigNavLinks ul {
+  display: flex;
+}
+
+.bigNavLinks li {
+  margin: 0 30px;
+}
+
+.bigNavLinks li a {
+  color: var(--app-gray-600);
+  font-size: 0.875rem;
+  font-family: var(--app-primary-font);
+  font-weight: 600;
+}
+
+.bigNav button {
+  font-size: 0.875rem;
+  font-family: var(--app-secondary-font);
+}
+
+.mobileList {
+  z-index: 3000;
+  animation: slideIn 0.2s linear;
+}
+
+.close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top:20px;
+  right: 15px;
+}
+
+@keyframes slideIn{
+  0% {
+    width: 0px;
+  }
+
+  100% {
+    width: 100%;
+  }
+}

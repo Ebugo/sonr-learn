@@ -1,0 +1,21 @@
+.container {
+    height: 20px;
+    font-size: 8px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+}
+
+.container primary {
+    color: var(--app-blue-600);
+    background: var(--app-blue-300);
+}
+
+.container secondary {
+    color: var(--app-blue-600);
+    background: var(--app-blue-300);
+}
+
+.container tertiary {
+    color: var(--app-blue-600);
+    background: var(--app-blue-300);
+}
