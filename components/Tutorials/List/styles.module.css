@@ -1,0 +1,39 @@
+.container {
+  overflow-x: hidden;
+}
+
+.container h3 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 800;
+  font-family: var(--app-primary-font-bold);
+}
+
+.container .tutorials-container button {
+  width: fit-content;
+}
+
+@media all and (min-width: 768px) {
+  .container h3 {
+    font-size: 1.35rem;
+    line-height: 1.5rem;
+  }
+
+  .container .tutorials-container > h3 {
+    width: 56.32%;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .container h3 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .container h3 {
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+  }
+}
