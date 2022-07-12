@@ -1,0 +1,44 @@
+.container {
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 412px;
+    min-height: 125px;
+    color: var(--app-grey-200);
+}
+
+.container:hover, .container.active {
+    background: #FFFFFF66;
+    color: var(--app-black-400);
+}
+
+.container > div:first-child {
+    background: transparent;
+    width: 15px;
+    border-radius: 5px;
+    margin-right: 5.83%;
+}
+
+.container:hover > div:first-child, .container.active > div:first-child {
+    display: block;
+    background: var(--app-blue-400);
+}
+
+.container h4 {
+    font-size: 1.15rem;
+    line-height: 1.5rem;
+    font-weight: 800;
+    font-family: var(--app-primary-font-bold);
+}
+
+.container .description * {
+    font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+    }
+
+    .container .description * {
+        font-size: 16px;
+    }
+}
