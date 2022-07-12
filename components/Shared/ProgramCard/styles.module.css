@@ -1,0 +1,70 @@
+
+.container h3 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 800;
+    font-family: var(--app-primary-font-bold);
+}
+
+.container .program-body {
+    border-radius: 15px;
+    background: var(--app-white);
+}
+
+.container .program-body > div:first-child span {
+    height: 100% !important;
+    border-radius: 15px;
+}
+
+.container .program-body div:last-child div:last-child {
+}
+
+.container span.sub-text {
+    color: var(--app-grey-200);
+}
+
+.container .program-body .description * {
+    font-size: 14px;
+    font-family: var(--app-primary-font-bold);
+}
+
+@media all and (min-width: 768px) {
+    .container h3 {
+        font-size: 1.35rem;
+        line-height: 1.5rem;
+    }
+
+    .container .program-body {
+        max-height: 470px !important;
+    }
+
+    .container .program-body .description * {
+        font-size: 16px;
+    }
+
+    .container .program-body > div:first-child {
+        min-width: 48.14%;
+    }
+
+    .container .program-body > div:first-child span {
+        height: 100% !important;
+        border-radius: 15px 0 0 15px;
+    }
+}
+
+@media all and (min-width: 992px) {
+    .container h3 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .container h3 {
+        font-size: 1.75rem;
+        line-height: 1.75rem;
+    }
+}
+
+@media all and (min-width: 1200px){
+}
