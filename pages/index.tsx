@@ -161,7 +161,7 @@ const Home: NextPage = () => {
 				<SuggestedTutorials header="All things Decentralization, Building in an IBC enabled chain, and the future of the web." />
 
 				<section className={`container ${styles["community-container"]}`}>
-					<h3 className="my-8 md:my-10">Upcoming events</h3>
+					<h3 className="my-8 md:my-10">Participate in our community bounty programs</h3>
 					<div className={`${styles["community-container-scroll"]} flex gap-10 bg-blue-700 p-5 md:p-10`}>
 						{
 							[1,2,3,4,5,6,7,8,9].map((community, i)=>(
