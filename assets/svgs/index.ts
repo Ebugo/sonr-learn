@@ -8,9 +8,12 @@ import LinkedinIcon from "./linkedin.svg";
 import ArrowDown from "./arrow-down.svg";
 import ArrowCircleRight from "./arrow-circle-right.svg";
 import Logo from "./logo.svg";
-import Banner from "./banner.svg";
+import BannerIcon from "./banner.svg";
 import Link from "./link.svg";
 import Star from "./star.svg";
+import Identity from "./identity.svg";
+import P2p from "./p2p.svg";
+import Zkp from "./zkp.svg";
 
 export {
 	Close,
@@ -22,8 +25,11 @@ export {
 	LinkedinIcon,
 	ArrowDown,
 	Logo,
-	Banner,
+	BannerIcon,
 	ArrowCircleRight,
 	Link,
-	Star
+	Star,
+	Identity,
+	P2p,
+	Zkp,
 };

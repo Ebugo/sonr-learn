@@ -18,7 +18,7 @@ const AppLayout = ({ children }: { children: ReactComponentElement<any> }) => {
 				<meta name="keywords" content="Sonr Learn"></meta>
 			</Head>
 			<Header />
-			<main className={`${styles["container"]} container pt-10 md:pt-14 md:px-16 lg:px-28`}>
+			<main className={`${styles["container"]} pt-10 md:pt-14`}>
 				{children}
 			</main>
 			<Footer />

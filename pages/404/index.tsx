@@ -8,7 +8,7 @@ import styles from './styles.module.css';
 const Error: NextPage = () => {
 	return (
 		<AppLayout>
-			<div className={styles["container"]}>
+			<div className={`container md:px-16 lg:px-28 ${styles["container"]}`}>
 				<Head>
 					<title>Sonr Learn | Page not found</title>
 				</Head>

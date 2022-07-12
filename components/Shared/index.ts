@@ -5,3 +5,7 @@ export * from "./Input";
 export * from "./Radio";
 export * from "./DropDown";
 export * from "./TutorialCard";
+export * from "./EventCard";
+export * from "./Tag";
+export * from "./TechCard";
+export * from "./ProgramCard";

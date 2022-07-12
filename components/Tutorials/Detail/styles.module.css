@@ -76,6 +76,7 @@
 
 .container .reference hr {
   background: var(--app-gray-200);
+  border: var(--app-gray-200);
   height: 1px;
   border: none;
 }

@@ -25,7 +25,7 @@ const EventCard: React.FC<Props> = ({ title, desc, time, image, date, url = "#" 
         <div>
           <Image src={image} width={357} height={268.78} />
         </div>
-        <div className="flex-grow flex flex-col p-5 md:px-10 md:py-6">
+        <div className="flex-grow flex flex-col p-5 xl:px-10 md:py-6">
           <h4>{title}</h4>
           <span className="mt-1">{desc}</span>
           <div className={`${styles["description"]} mt-2 md:mt-5 flex items-center`}>

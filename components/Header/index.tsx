@@ -18,11 +18,11 @@ const Header = () => {
 			>
 				<div className="">
 					<div className="flex justify-between">
-						<div className="flex items-center">
+						<div className="flex items-center flex-grow">
 							<div className="cursor-pointer">
 								<Link href="/"><Logo /></Link>
 							</div>
-							<nav className={`${styles.bigNavLinks} ml-8 py-2`}>
+							<nav className={`${styles.bigNavLinks} ml-auto`}>
 								<ul>
 									<li>
 										<Link href="/tutorials">Tutorials</Link>

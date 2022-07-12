@@ -1,5 +1,6 @@
 .wrapper {
     background:  var(--app-blue-100);
+    transition: all ease-in-out 0.5s;
 }
 
 .container {

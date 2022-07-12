@@ -38,12 +38,18 @@
   margin-bottom: 15px;
 }
 
+.container hr {
+  height: 1px;
+  background: var(--app-gray-200);
+  border: var(--app-gray-200);
+  border-radius: 1px;
+}
+
 .container .logo-container svg {
   transform: scale(0.8);
 }
 
 .container li {
-  color: var(--app-gray-800);
   font-family: var(--app-primary-font);
   font-size: 0.875rem;
   margin-bottom: 15px;

@@ -8,7 +8,7 @@ import {TutorialsList} from "../../components/Tutorials";
 const Home: NextPage = () => {
 	return (
 		<AppLayout>
-			<div>
+			<div className="container md:px-16 lg:px-28">
 				<Head>
 					<title>Sonr Learn | Tutorials</title>
 				</Head>

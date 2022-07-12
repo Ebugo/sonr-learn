@@ -7,27 +7,26 @@
 }
 
 .bigNavLinks {
-  border-left: 1px solid var(--app-gray-200);
 }
 
 .bigNavLinks ul {
   display: flex;
+  /*align-items: flex-end;*/
 }
 
 .bigNavLinks li {
   margin: 0 30px;
+  cursor: pointer;
 }
 
-.bigNavLinks li a {
-  color: var(--app-gray-600);
-  font-size: 0.875rem;
-  font-family: var(--app-primary-font);
-  font-weight: 600;
+.bigNavLinks li * {
+  font-size: 1.05rem;
+  font-family: var(--app-primary-font-bold);
+  font-weight: 800;
 }
 
 .bigNav button {
   font-size: 0.875rem;
-  font-family: var(--app-secondary-font);
 }
 
 .mobileList {

@@ -3,7 +3,7 @@ import {
 	FacebookIcon,
 	Logo,
 	InstagramIcon,
-	TwitterIcon, Banner,
+	TwitterIcon, BannerIcon,
 } from "../../assets";
 
 import styles from "./styles.module.css";

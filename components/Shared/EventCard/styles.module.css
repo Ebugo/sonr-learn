@@ -19,10 +19,11 @@
 
 .container h4+span {
     color: var(--app-grey-200);
+    font-size: 14px !important;
 }
 
 .container .description * {
-    font-size: 14px;
+    font-size: 14px !important;
 }
 
 .container .description .avatar {

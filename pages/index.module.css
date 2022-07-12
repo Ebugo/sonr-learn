@@ -1,11 +1,12 @@
 .container {
+  overflow: hidden;
 }
 
 .container h1 {
   font-weight: 700;
   font-size: 1.5rem;
   letter-spacing: -0.01em;
-  color: #FFFFFF;
+  font-family: var(--app-primary-font-bold);
 }
 
 .container h2 {
@@ -27,14 +28,10 @@
 }
 
 .container .banner {
-  background: linear-gradient(150.31deg, #1792FF 9.54%, #0053B5 97.47%);
-  border-radius: 15px;
-  min-height: 282px;
+
 }
 
 .container .banner div:first-child {
-  position: relative;
-  z-index: 1;
 }
 
 .container .banner div:first-child button {
@@ -42,59 +39,71 @@
 }
 
 .container .banner div:last-child {
-  right: -105px;
-  bottom: -220px;
-  transform: scale(0.5) translate(280px, 3px);
 }
 
 .container .banner button {
-  color: var(--app-black-500);
-  background: var(--app-blue-200);
   font-size: 14px;
 }
 
 .container .banner button svg {
-  transform: scale(0.75);
 }
 
-.container .latest-tutorial {
-  border-radius: 15px;
-  background: var(--app-white);
+.container .subscribe {
 }
 
-.container .latest-tutorial > div:first-child span {
-  height: 100% !important;
-  border-radius: 15px;
+.container .subscribe form input.subscribe-input,
+.container .subscribe form > div, .container .subscribe form > button {
+  width: 100%;
 }
 
-.container .latest-tutorial div:last-child div:last-child {
-}
-
-.container span.sub-text {
+.container input.subscribe-input::placeholder {
   color: var(--app-grey-200);
 }
 
-.container .latest-tutorial .description * {
+.container .subscribe p {
   font-size: 14px;
+  line-height: 16px;
+  color: #676376;
 }
 
-.container .latest-tutorial .description .avatar {
-  color: var(--app-white);
-  background: radial-gradient(77.08% 77.08% at 15.83% 16.25%, #69CEBD 8.33%, #14B69A 34.37%, #009C82 81.77%);
-  border: 1px solid var(--app-white);
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.container .subscribe button {
 }
 
-.container .latest-tutorial .arrow-container {
-  background: var(--app-blue-500);
+.container hr {
+  height: 1px;
+  background: var(--app-gray-200);
+  border: var(--app-gray-200);
+  border-radius: 1px;
+}
+
+.container .tutorials-sample-container {
+  overflow-x: hidden;
+}
+
+.container .tutorials-sample > div:nth-child(2) {
+  border-radius: 15px;
+}
+
+.container .tutorials-sample > div:nth-child(2) * {
+  box-shadow: 0px 4px 8px -4px rgba(22, 34, 51, 0.12), 0px 16px 20px rgba(22, 34, 51, 0.08);
+  border-radius: 15px;
+}
+
+.container .community-container .community-container-scroll {
+  overflow-x: auto;
+  border-radius: 10px;
+}
+
+.container .community-container .image-container {
+  min-width: 408px;
+  height: 290px;
+}
+
+.container .community-container .arrow-container {
+  background: var(--app-blue-700);
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,20 +112,15 @@
   cursor: pointer;
 }
 
-.container hr {
-  height: 1px;
-  background: #AEACB8;
-  border-radius: 1px;
-}
-
-.container .tutorials-container button {
-  width: fit-content;
+.container .community-container .arrow-container:first-child {
+  transform: rotate(180deg);
 }
 
 @media all and (min-width: 768px) {
   .container h1 {
     font-size: 1.65rem;
     line-height: 1.75rem;
+    width: 80%;
   }
 
   .container h2 {
@@ -134,39 +138,32 @@
     line-height: 1.5rem;
   }
 
+  .container .banner {
+  }
+
+  .container .banner > div:first-child {
+    width: 50%;
+  }
+
   .container .banner button {
     font-size: 16px;
     transform: none;
   }
 
-  .container .latest-tutorial {
-    max-height: 417px !important;
+  .container .subscribe form .subscribe-input {
+    width: 62.34%;
   }
 
-  .container .latest-tutorial .description * {
-    font-size: 16px;
+  .container .subscribe form > div, .container .subscribe form > button {
+    width: fit-content;
   }
 
-  .container .latest-tutorial > div:first-child {
-    width: 45.9%;
+  .container .tutorials-sample {
+    margin-right: -115px;
   }
 
-  .container .latest-tutorial > div:first-child span {
-    height: 100% !important;
-    border-radius: 15px 0 0 15px;
-  }
-
-  .container .tutorials-container > h3 {
-    width: 56.32%;
-  }
-
-  .container .banner div:last-child {
-    transform: scale(0.6) translate(185px, 3px);
-  }
-
-  .container .latest-tutorial .arrow-container {
-    width: 48px;
-    height: 48px;
+  .container .tutorials-sample > div:first-child h3 {
+    width: 80%;
   }
 }
 
@@ -190,16 +187,12 @@
     font-size: 1rem;
     line-height: 2rem;
   }
-
-  .container .banner div:last-child {
-    transform: scale(0.75) translate(100px, 3px);
-  }
 }
 
 @media all and (min-width: 1024px) {
   .container h1 {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 3rem;
+    line-height: 2.75rem;
   }
 
   .container h2 {
@@ -213,13 +206,16 @@
   }
 
   .container p {
-    font-size: 1.75rem;
+    font-size: 1rem;
     line-height: 2.2rem;
   }
 }
 
 @media all and (min-width: 1200px){
-  .container .banner div:last-child {
-    transform: none;
+}
+
+@media all and (min-width: 1280px){
+  .container .tutorials-sample > div:first-child {
+    width: 41.11%;
   }
 }
