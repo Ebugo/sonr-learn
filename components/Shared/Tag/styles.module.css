@@ -1,13 +1,23 @@
 .container {
-    height: 20px;
-    font-size: 8px;
-    line-height: 16px;
     letter-spacing: 0.02em;
-    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--app-primary-font-bold);
+}
+
+.container.small {
+    font-size: 8px;
+    border-radius: 10px;
+    padding: 2px 8px;
+    line-height: 16px;
+}
+
+.container.medium {
+    font-size: 16px;
+    border-radius: 100px;
+    padding: 5px 26px;
+    line-height: 20px;
 }
 
 .container.primary {
@@ -23,4 +33,9 @@
 .container.tertiary {
     color: #990831;
     background: #FFDAE6;
+}
+
+.container.green {
+    color: #006655;
+    background: #CBF7F0;
 }

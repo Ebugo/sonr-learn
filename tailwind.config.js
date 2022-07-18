@@ -29,6 +29,8 @@ module.exports = {
 			"blue-500": "#0D6ECC",
 			"blue-700": "#003066",
 			"green-400": "#0F6664",
+			"green-500": "#006655",
+			"red-500": "#CC154A",
 			"white": "#FFFFFF",
 		},
 		fontFamily: {

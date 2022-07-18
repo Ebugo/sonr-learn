@@ -2,7 +2,19 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import styles from './index.module.css';
 import {AppLayout, Button, Image, Input, Tag, TechCard} from "../components";
-import {ArrowCircleRight, Banner, Community, Identity, P2p, Screenshot, Screenshot2, Zkp} from "../assets";
+import {
+	ArrowCircleRight, ArrowRight,
+	Award,
+	Banner,
+	Book, Box,
+	Community,
+	Grid,
+	Identity,
+	P2p,
+	Screenshot,
+	Screenshot2, Star,
+	Zkp
+} from "../assets";
 import {tutorials, events} from "../data";
 import React, {useEffect, useState} from "react";
 import {useRouter} from "next/router";
@@ -73,10 +85,10 @@ const Home: NextPage = () => {
 				<section className={`${styles["banner"]} container md:px-16 lg:px-28 flex flex-col md:flex-row justify-center`}>
 					<div className="md:mt-28">
 						<div className="flex flex-wrap gap-3 w-full">
-							<Tag text="Learn" color="primary" />
-							<Tag text="Build" color="tertiary" />
-							<Tag text="Share" color="secondary" />
-							<Tag text="Earn" color="secondary" />
+							<Tag text="Learn" color="primary" size="medium" />
+							<Tag text="Build" color="tertiary" size="medium" />
+							<Tag text="Share" color="green" size="medium" />
+							<Tag text="Earn" color="secondary" size="medium" />
 						</div>
 						<h1 className="my-5">Learn how to build in
 							a true Decentralized
@@ -154,9 +166,44 @@ const Home: NextPage = () => {
 					</div>
 				</section>
 
-				{/*<section className={`container my-10 md:my-20 ${styles["programs-container"]}`}>*/}
-				{/*	<h3 className="mb-10 text-center">Featured Programs</h3>*/}
-				{/*</section>*/}
+				<section className={`container my-10 md:my-20 ${styles["programs-container"]}`}>
+					<h3 className="mb-10 text-center">Featured Programs</h3>
+
+					<div className="grid grid-cols-2 gap-6">
+						<div className="col-span-2 px-5 md:px-10 py-8 md:py-14 bg-blue-500">
+							<Button className="ml-auto mb-5 md:mb-0">
+								<span className="flex items-center">
+									<ArrowRight />
+									<span className="ml-2">Become a Certified Sonr Developer</span>
+								</span>
+							</Button>
+							<div className={styles["icon-container"]}><Award/></div>
+							<h5 className="mt-5 mb-2">Sonr Certification - <span>Missions</span></h5>
+							<p>This is a learning journey that affords you a defined scope of learning while you build a project as you learn. <br/>
+								You start from basic blockchain courses and dive deeper into the Sonr Ecosystem. <br/>
+								You get certified and receive a reward in form(token, Non-fungible tokens, NFT or monetary).</p>
+							<div className="mt-5 md:mt-10 flex gap-5 flex-col md:flex-row">
+								<span className="flex items-center gap-2"><Box/> Introductory Blockchain Developer Certification</span>
+								<span className="flex items-center gap-2"><Box/> Intermediate Sonr Developer Certification</span>
+								<span className="flex items-center gap-2"><Box/> Master Sonr Developer Certification</span>
+							</div>
+						</div>
+
+						<div className="col-span-2 md:col-span-1 px-5 md:px-10 py-8 md:py-14 bg-red-500">
+							<div className={styles["icon-container"]}><Book/></div>
+							<h5 className="mt-2 mb-5 md:mt-5 md:mb-10">Tutorials</h5>
+							<p>&quot;Show me the concept in codes&quot; kind of learning. <br/>
+								This involves building basic projects illustrating a particular
+								concept in the Sonr Ecosystem.</p>
+						</div>
+						<div className="col-span-2 md:col-span-1 px-5 md:px-10 py-8 md:py-14 bg-green-500">
+							<div className={styles["icon-container"]}><Grid/></div>
+							<h5 className="mt-2 mb-5 md:mt-5 md:mb-10">Hackathons</h5>
+							<p>This includes online and offline Hackathons organized for
+								developers in different regions across the globe.</p>
+						</div>
+					</div>
+				</section>
 
 				<SuggestedTutorials header="All things Decentralization, Building in an IBC enabled chain, and the future of the web." />
 

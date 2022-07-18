@@ -76,6 +76,58 @@
   border-radius: 1px;
 }
 
+.container .programs-container > div > div {
+  border-radius: 10px;
+  color: var(--app-white);
+  background-image: url("../assets/pngs/honey-comb.png");
+  background-size: contain;
+  background-position: 100% 0px;
+  background-repeat: no-repeat;
+}
+
+.container .programs-container > div > div .icon-container {
+  width: 104px;
+  height: 104px;
+  border-radius: 15px;
+  background: var(--app-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .programs-container > div > div h5 {
+  font-family: var(--app-primary-font-bold);
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: -0.01em;
+}
+
+.container .programs-container > div > div h5 span {
+  font-family: var(--app-primary-font);
+}
+
+.container .programs-container > div > div p {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 28px;
+}
+
+.container .programs-container > div > div > div span {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #B9E2FF;
+}
+
+.container .programs-container > div > div:first-child button {
+  color: var(--app-black-500);
+  background: var(--app-blue-200);
+  font-size: 16px;
+  font-family: var(--app-primary-font-bold);
+  font-weight: 800;
+}
+
 .container .tutorials-sample-container {
   overflow-x: hidden;
 }
@@ -217,5 +269,24 @@
 @media all and (min-width: 1280px){
   .container .tutorials-sample > div:first-child {
     width: 41.11%;
+  }
+}
+
+@media all and (max-width: 767px){
+  .container .programs-container p {
+    font-size: 15px !important;
+  }
+
+  .container .programs-container span {
+    font-size: 14px !important;
+  }
+
+  .container .programs-container svg {
+    transform: scale(0.75);
+  }
+
+  .container .programs-container .icon-container {
+    height: 70px!important;
+    width: 70px!important;
   }
 }

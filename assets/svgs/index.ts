@@ -14,6 +14,13 @@ import Star from "./star.svg";
 import Identity from "./identity.svg";
 import P2p from "./p2p.svg";
 import Zkp from "./zkp.svg";
+import ArrowRight from "./arrow-right.svg";
+import Award from "./award.svg";
+import Book from "./book-square.svg";
+import Build from "./build.svg";
+import Grid from "./grid.svg";
+import Learn from "./learn.svg";
+import Box from "./box.svg";
 
 export {
 	Close,
@@ -32,4 +39,11 @@ export {
 	Identity,
 	P2p,
 	Zkp,
+	ArrowRight,
+	Award,
+	Book,
+	Build,
+	Grid,
+	Learn,
+	Box
 };
