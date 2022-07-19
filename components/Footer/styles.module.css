@@ -5,7 +5,8 @@
 .container .subscribe {
   background-color: var(--app-blue-500);
   background-image: url("../../assets/pngs/subscribe.png");
-  background-position: calc(100% - 17px) 100%;
+  background-position: -70px 100px;
+  background-size: contain;
   border-radius: 10px;
   background-repeat: no-repeat;
   min-height: 384px;
@@ -78,6 +79,10 @@
   .container h4 {
     font-size: 1.75rem;
     line-height: 2rem;
+  }
+
+  .container .subscribe {
+    background-position: calc(100% - 17px) 100%;
   }
 }
 

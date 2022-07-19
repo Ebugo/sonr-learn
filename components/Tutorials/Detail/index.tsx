@@ -9,8 +9,8 @@ import {Tag} from "../../Shared/Tag";
 
 const TutorialsDetail = () => {
 	return (
-		<div className={styles["container"]}>
-			<section className="pt-4">
+		<div className={`${styles["container"]} flex flex-col md:flex-row`}>
+			<section className="pt-14 md:pt-4 md:order-1 order-2">
 				<div className="flex flex-wrap gap-3 w-full mb-2">
 					<Tag text="Consensus Mechanism" color="primary" />
 					<Tag text="Blockchain" color="secondary" />
@@ -66,8 +66,8 @@ const TutorialsDetail = () => {
 				</div>
 			</section>
 
-			<section className="flex-grow md:pl-5">
-				<div className={`${styles["reference"]} p-5 md:p-10 sticky top-20`}>
+			<section className="flex-grow md:pl-5 order-1 md:order-2">
+				<div className={`${styles["reference"]} p-5 md:p-10 sticky top-28`}>
 					<h5>SECTION REFERENCE</h5>
 					<hr className="mt-2 mb-5 md:mb-8"/>
 
