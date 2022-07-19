@@ -12,9 +12,9 @@ const Header = () => {
 	const { push } = useRouter();
 
 	return (
-		<>
+		<div className={`${styles["wrapper"]} sticky top-0 z-10`}>
 			<header
-				className={`container ${styles.container} ${styles.bigNav} py-5 hidden xl:block sticky top-0 z-10`}
+				className={`container ${styles.container} ${styles.bigNav} py-5 hidden xl:block`}
 			>
 				<div className="">
 					<div className="flex justify-between">
@@ -81,7 +81,7 @@ const Header = () => {
 					</div>
 				</div>
 			</header>
-		</>
+		</div>
 	);
 };
 

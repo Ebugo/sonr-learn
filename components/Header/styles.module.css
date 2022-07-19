@@ -1,3 +1,7 @@
+.wrapper {
+  background:  var(--app-blue-100);
+}
+
 .container {
   background:  var(--app-blue-100);
 }
