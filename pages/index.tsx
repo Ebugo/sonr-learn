@@ -6,10 +6,10 @@ import {
 	ArrowCircleRight, ArrowRight,
 	Award,
 	Banner,
-	Book, Box,
+	Book, Box, Build,
 	Community,
 	Grid,
-	Identity,
+	Identity, Learn,
 	P2p,
 	Screenshot,
 	Screenshot2, Star,
@@ -196,7 +196,9 @@ const Home: NextPage = () => {
 								This involves building basic projects illustrating a particular
 								concept in the Sonr Ecosystem.</p>
 						</div>
-						<div className="col-span-2 md:col-span-1 px-5 md:px-10 py-8 md:py-14 bg-green-500">
+						<div className="col-span-2 md:col-span-1 px-5 md:px-10 py-8 md:py-14 bg-green-500 relative">
+							<Learn/>
+							<Build/>
 							<div className={styles["icon-container"]}><Grid/></div>
 							<h5 className="mt-2 mb-5 md:mt-5 md:mb-10">Hackathons</h5>
 							<p>This includes online and offline Hackathons organized for
