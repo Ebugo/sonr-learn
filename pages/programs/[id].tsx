@@ -7,7 +7,7 @@ import {ProgramsDetail} from "../../components";
 
 const Home: NextPage = () => {
 	return (
-		<AppLayout>
+		<AppLayout showFooter={false}>
 			<div className="container md:px-16 lg:px-28">
 				<Head>
 					<title>Sonr Learn | Tutorials</title>

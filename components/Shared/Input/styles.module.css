@@ -5,12 +5,10 @@
 .container input {
 	width: 100%;
 	background-color: var(--app-white);
-	border-radius: var(--app-border-radius-sm);
-	height: 48px;
-	padding: 12px 16px;
-	font-size: 0.875rem;
-	/* margin-bottom: 3px; */
-	/* min-height: 46px; */
+	border: 1.5px solid #676376;
+	border-radius: 6px;
+	height: 40px;
+	padding: 12px 12px 12px 30px;
 }
 
 .container input::placeholder {
@@ -18,11 +16,10 @@
 }
 
 .container label {
-	background-color: transparent;
-	color: var(--app-gray-400);
-	font-size: 12px;
-	font-weight: 400;
-	font-family: var(--app-tertiary-font);
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: #4F4A60;
 }
 
 .container label.active {
@@ -35,8 +32,8 @@
 
 .icon {
 	position: absolute;
-	right: 5%;
-	top: 30%;
+	left: 3%;
+	bottom: 20%;
 }
 
 @media screen and (min-width: 400px) {

@@ -9,7 +9,7 @@ interface Props {
   className?: string | "";
   type?: "button" | "submit" | "reset";
   text?: string | "";
-  variant?: "contained" | "outlined";
+  variant?: "contained" | "outlined" | "light";
   buttonStyle?: "rounded" | "curved";
   disabled?: boolean;
 }

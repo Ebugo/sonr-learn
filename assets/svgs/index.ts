@@ -9,7 +9,7 @@ import ArrowDown from "./arrow-down.svg";
 import ArrowCircleRight from "./arrow-circle-right.svg";
 import Logo from "./logo.svg";
 import BannerIcon from "./banner.svg";
-import Link from "./link.svg";
+import LinkIcon from "./link.svg";
 import Star from "./star.svg";
 import Identity from "./identity.svg";
 import P2p from "./p2p.svg";
@@ -21,6 +21,8 @@ import Build from "./build.svg";
 import Grid from "./grid.svg";
 import Learn from "./learn.svg";
 import Box from "./box.svg";
+import User from "./user.svg";
+import Email from "./email.svg";
 
 export {
 	Close,
@@ -34,7 +36,7 @@ export {
 	Logo,
 	BannerIcon,
 	ArrowCircleRight,
-	Link,
+	LinkIcon,
 	Star,
 	Identity,
 	P2p,
@@ -45,5 +47,7 @@ export {
 	Build,
 	Grid,
 	Learn,
-	Box
+	Box,
+	User,
+	Email
 };

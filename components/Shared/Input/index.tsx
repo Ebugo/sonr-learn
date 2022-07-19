@@ -89,6 +89,7 @@ function Input({
 					{label}
 				</label>
 			)}
+			{Icon ? <Icon className={`${styles.icon}`} /> : ""}
 			<input
 				id={id ?? name}
 				name={name}
@@ -110,7 +111,6 @@ function Input({
 			{/*		<Email />*/}
 			{/*	</span>*/}
 			{/*)}*/}
-			{Icon ? <Icon className={`${styles.icon}`} /> : ""}
 			{(error || status) && <div className={`${styles["error-message"]}`}>{error || status}</div>}
 		</div>
 	);

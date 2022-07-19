@@ -1,5 +1,20 @@
-.container {
-  /*overflow-x: hidden;*/
+.container .side-nav {
+  height: 78%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.container .side-nav * {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  gap: 28px;
+}
+
+.container .side-nav h6, .container .side-nav a.visited {
+  font-weight: 800;
+  font-family: var(--app-primary-font-bold);
 }
 
 .container h1 {
@@ -84,6 +99,11 @@
 .container .image-container {
   margin-top: 10px;
   margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+.container .image-container > * {
+  border-radius: 15px;
 }
 
 .container .highlight-text {
@@ -92,11 +112,72 @@
   background: var(--app-blue-200);
 }
 
-@media all and (min-width: 768px) {
-  .container {
-    display: flex;
-  }
+.container .submit-project {
+  background-color: var(--app-blue-500);
+  background-image: url("../../../assets/svgs/award-light.svg");
+  background-position: calc(100% - 17px) 100%;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  min-height: 224px;
+}
 
+.container .submit-project form > div, .container .submit-project form > button {
+  width: 100%;
+}
+
+.container input.submit-project-input::placeholder {
+  color: var(--app-grey-200);
+}
+
+.container .submit-project button {
+  background: var(--app-blue-200);
+  color: var(--app-black-400);
+}
+
+.container .submit-project p {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: var(--app-primary-font-bold);
+  color: var(--app-blue-200);
+}
+
+.container h4 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.container h6 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: var(--app-primary-font-bold);
+  margin-bottom: 15px;
+}
+
+.container hr {
+  height: 1px;
+  background: var(--app-gray-200);
+  border: var(--app-gray-200);
+  border-radius: 1px;
+}
+
+.container .logo-container svg {
+  transform: scale(0.8);
+}
+
+.container li {
+  font-family: var(--app-primary-font);
+  font-size: 0.875rem;
+  margin-bottom: 15px;
+}
+
+.socialLinksContainer {
+  border-top: 2px solid var(--app-gray-200);
+}
+
+@media all and (min-width: 768px) {
   .container h1, .container h2 {
     font-size: 1.35rem;
     line-height: 1.5rem;
@@ -107,9 +188,19 @@
     line-height: 1.5rem;
   }
 
-  .container section:first-child {
-    width: 63.33%;
+  .container h4 {
+    font-size: 1.65rem;
+    line-height: 1.75rem;
   }
+
+  .container .submit-project-input input {
+    width: 351px;
+  }
+
+  .container .submit-project form > div, .container .submit-project form > button {
+    width: fit-content;
+  }
+
 }
 
 @media all and (min-width: 992px) {
@@ -122,9 +213,25 @@
     font-size: 1.1rem;
     line-height: 2rem;
   }
+
+  .container h4 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
 }
 
 @media all and (min-width: 1024px) {
+  .container {
+    display: flex;
+  }
+
+  .container > section:first-child {
+  }
+
+  .container > section:nth-child(2) {
+    width: 73.19%;
+  }
+
   .container h1, .container h2 {
     font-size: 1.75rem;
     line-height: 1.75rem;
@@ -133,5 +240,16 @@
   .container p {
     font-size: 1.15rem;
     line-height: 2.2rem;
+  }
+
+  .container .side-nav {
+    position: fixed;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .container h4 {
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
 }

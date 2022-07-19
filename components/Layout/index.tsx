@@ -4,7 +4,7 @@ import { Footer, Header } from '..';
 import styles from './styles.module.css';
 
 
-const AppLayout = ({ children }: { children: ReactComponentElement<any> }) => {
+const AppLayout = ({ children, showFooter = true }: { children: ReactComponentElement<any>, showFooter?: boolean }) => {
 	return (
 		<div className={styles["wrapper"]}>
 			<Head>
@@ -21,7 +21,7 @@ const AppLayout = ({ children }: { children: ReactComponentElement<any> }) => {
 			<main className={`${styles["container"]} pt-10 md:pt-14`}>
 				{children}
 			</main>
-			<Footer />
+			{showFooter && <Footer/>}
 		</div >
 	);
 };

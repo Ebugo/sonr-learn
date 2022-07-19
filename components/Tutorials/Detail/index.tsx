@@ -2,7 +2,7 @@
 
 import styles from './styles.module.css';
 import {Image} from "../../Shared";
-import {CodeBlock, Link, Rating, TutorialAccess} from "../../../assets";
+import {CodeBlock, LinkIcon, Rating, TutorialAccess} from "../../../assets";
 import React from "react";
 import {Tag} from "../../Shared/Tag";
 
@@ -56,7 +56,7 @@ const TutorialsDetail = () => {
 
 
 					<p>You can go ahead and verify your project contract address. Your local testnet should be running on 0001:0.0019200.</p>
-					<p>Hope you found this tutorial valuable? Drop a rating of a scale of 1 - 10 on how likely you are to recommend our learning resources to your colleagues and pals. Continue Learning <Link href="#">here</Link>.</p>
+					<p>Hope you found this tutorial valuable? Drop a rating of a scale of 1 - 10 on how likely you are to recommend our learning resources to your colleagues and pals. Continue Learning <LinkIcon href="#">here</LinkIcon>.</p>
 
 					{/*	Ratings*/}
 					<div className="my-10">
@@ -73,7 +73,7 @@ const TutorialsDetail = () => {
 
 					<div className="flex flex-col mb-5">
 						<a href="/tutorials/1#initial" className="my-1 flex">
-							<Link />
+							<LinkIcon />
 							<span className="ml-2">Initial Setup</span>
 						</a>
 						<a href="#" className="my-1 ml-8">Sign up to sonr beam</a>
@@ -81,7 +81,7 @@ const TutorialsDetail = () => {
 					</div>
 					<div className="flex flex-col mb-5">
 						<a href="/tutorials/1#run" className="my-1 flex">
-							<Link />
+							<LinkIcon />
 							<span className="ml-2">Running a Hello World Testnet</span>
 						</a>
 						<a href="#" className="my-1 ml-8">Sign up to sonr beam</a>

@@ -1,0 +1,46 @@
+.login-container {
+    min-height: 70vh;
+}
+
+.login-container form {
+    width: 100%;
+    background: var(--app-white);
+    border-radius: 6px;
+}
+
+.login-container form h3 {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+    font-family: var(--app-primary-font-bold);
+}
+
+.login-container form p {
+    color: var(--app-blue-500);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+@media all and (min-width: 768px) {
+    .login-container form {
+        width: 59.72%;
+        max-width: 572px;
+    }
+}
+
+@media all and (min-width: 992px) {
+}
+
+@media all and (min-width: 1024px) {
+}
+
+@media all and (min-width: 1024px) {
+}
+
+@media all and (min-width: 1440px) {
+    .login-container form {
+        width: 39.72%;
+    }
+}

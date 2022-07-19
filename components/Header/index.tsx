@@ -14,7 +14,7 @@ const Header = () => {
 	return (
 		<>
 			<header
-				className={`container ${styles.container} ${styles.bigNav} py-5 hidden xl:block`}
+				className={`container ${styles.container} ${styles.bigNav} py-5 hidden xl:block sticky top-0 z-10`}
 			>
 				<div className="">
 					<div className="flex justify-between">
@@ -62,7 +62,7 @@ const Header = () => {
 				</div>
 			</header>
 			<header
-				className={`${styles.container} ${styles.smallNav} py-5 xl:hidden container`}
+				className={`${styles.container} ${styles.smallNav} py-5 xl:hidden container sticky top-0 z-10`}
 			>
 				<div className={``}>
 					<div className="flex justify-between items-center">

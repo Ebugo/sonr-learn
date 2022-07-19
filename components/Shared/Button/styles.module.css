@@ -1,7 +1,6 @@
 /** @format */
 
 .container * {
-	font-family: var(--app-secondary-font);
 	letter-spacing: 0.5px;
 }
 
@@ -19,15 +18,16 @@
 }
 
 button.container:disabled {
-	background-color: var(--app-gray-400);
-	color: var(--app-black);
+	background-color: var(--app-grey-200);
+	color: var(--app-black-400);
 	cursor: not-allowed;
 }
 
-.container.primary {
-	border-radius: var(--app-border-radius-sm);
-	background-color: var(--app-orange);
-	color: white;
+.container.light {
+	font-family: var(--app-primary-font-bold);
+	background-color: var(--app-blue-200);
+	color: var(--app-blue-700);
+	font-weight: 800;
 }
 
 .container:hover {
