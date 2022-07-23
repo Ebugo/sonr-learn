@@ -12,7 +12,7 @@ const SuggestedTutorials = ({ header }: { header: string }) => {
 	return (
 		<section className={`container ${styles["tutorials-container"]}`}>
 			<h3 className="mb-10">{header}</h3>
-			<div className="grid md:grid-cols-3 gap-10">
+			<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 				{tutorials.map(({ title, author, duration, image, tags, date}, i) => (
 					<TutorialCard key={i} title={title} author={author} duration={duration} image={image} date={date} tags={tags} />
 				))}

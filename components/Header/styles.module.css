@@ -10,6 +10,34 @@
   /*box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;*/
 }
 
+.bigNav .dropdown .dropdown-content {
+  width: 213px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 12px -4px rgba(22, 34, 51, 0.12), 0px 16px 32px rgba(22, 34, 51, 0.16);
+  border-radius: 5px;
+  padding: 23px 25px;
+}
+
+.bigNav .dropdown .dropdown-content .dropdown-item {
+  /*height: 36px;*/
+  border-radius: 3px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start !important;
+  padding: 12px 14px;
+}
+
+.bigNav .dropdown .dropdown-content .dropdown-item:hover {
+  background: #D6EDFF;
+  border-radius: 6px;
+  color: #0D6ECC;
+}
+
+.bigNav .dropdown .dropdown-content .dropdown-item:hover svg path {
+  fill: #0D6ECC;
+}
+
 .bigNavLinks {
 }
 
@@ -24,9 +52,9 @@
 }
 
 .bigNavLinks li * {
-  font-size: 1.05rem;
-  font-family: var(--app-primary-font-bold);
-  font-weight: 800;
+  font-size: 1.05rem !important;
+  font-family: var(--app-primary-font-bold) !important;
+  font-weight: 800 !important;
 }
 
 .bigNav button {
@@ -36,6 +64,19 @@
 .mobileList {
   z-index: 3000;
   animation: slideIn 0.2s linear;
+}
+
+.smallNav .nav-content{
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.mobileNavLinks ul li, .mobileNavLinks+button {
+  margin: 15px;
+}
+
+.mobileNavLinks a svg path {
+  fill: #FFFFFF !important;
 }
 
 .close {

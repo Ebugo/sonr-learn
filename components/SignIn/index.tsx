@@ -1,7 +1,7 @@
 import styles from './styles.module.css';
 import React from "react";
 import {Button, Input} from "../Shared";
-import {Email, User} from "../../assets";
+import {EmailNav, User} from "../../assets";
 
 
 const SignIn = () => {
@@ -13,7 +13,7 @@ const SignIn = () => {
 
 				<div className="py-3 flex flex-col gap-3">
 					<Input Icon={User} label="First Name" name="firstname" placeholder="First name" />
-					<Input Icon={Email} label="Email Address" name="email" placeholder="example@gmail.com" />
+					<Input Icon={EmailNav} label="Email Address" name="email" placeholder="example@gmail.com" />
 				</div>
 
 				<div className="py-3">

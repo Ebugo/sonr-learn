@@ -1,13 +1,9 @@
 import React from "react";
-import {
-	FacebookIcon,
-	Logo,
-	InstagramIcon,
-	TwitterIcon, BannerIcon,
-} from "../../assets";
+import { Logo } from "../../assets";
 
 import styles from "./styles.module.css";
 import {Button, Input} from "../Shared";
+import Link from "next/dist/client/link";
 
 const Footer = () => {
 	return (
@@ -40,28 +36,36 @@ const Footer = () => {
 						<div className="col-span-1">
 							<h6>Learning</h6>
 							<ul>
-								<li>Tutorials</li>
-								<li>Missions (Certification courses)</li>
-								<li>Demo</li>
-								<li>Challenge Projects</li>
+								<li><Link href="/tutorials">Tutorials</Link></li>
+								<li><Link href="/programs">Missions (Certification courses)</Link></li>
+								<li><Link href="/#">Demo</Link></li>
+								<li><Link href="/programs">Challenge Projects</Link></li>
 							</ul>
 						</div>
 						<div className="col-span-1">
 							<h6>Programs</h6>
 							<ul>
-								<li>Hackathons</li>
-								<li>Community events</li>
-								<li>Developer ranking</li>
-								<li>Outreach programs</li>
+								<li><Link href="/programs">Hackathons</Link></li>
+								<li><Link href="/#upcoming-events">Community events</Link></li>
+								<li><Link href="/#">Developer ranking</Link></li>
+								<li><Link href="/programs">Outreach programs</Link></li>
 							</ul>
 						</div>
 						<div className="col-span-1">
 							<h6>Community</h6>
 							<ul>
-								<li>Discord</li>
-								<li>Twitter</li>
-								<li>Instagram</li>
-								<li>YouTube</li>
+								<li><a href="https://discord.gg/5hhXnNaV" target="_blank" rel="noreferrer">
+									Discord
+								</a></li>
+								<li><a href="https://twitter.com/sonr_io" target="_blank" rel="noreferrer">
+									Twitter
+								</a></li>
+								<li><a href="https://www.instagram.com/sonr.snr/" target="_blank" rel="noreferrer">
+									Instagram
+								</a></li>
+								<li><a href="https://www.youtube.com/channel/UCLlBW-dsTGSS8vRlb66fh4g" target="_blank" rel="noreferrer">
+									YouTube
+								</a></li>
 							</ul>
 						</div>
 					</div>

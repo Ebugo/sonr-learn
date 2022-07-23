@@ -83,17 +83,17 @@ const Home: NextPage = () => {
 					<title>Sonr Learn | Home</title>
 				</Head>
 				<section className={`${styles["banner"]} container md:px-16 lg:px-28 flex flex-col md:flex-row justify-center`}>
-					<div className="md:mt-28">
+					<div className="md:mt-16 lg:mt-28">
 						<div className="flex flex-wrap gap-3 w-full">
 							<Tag text="Learn" color="primary" size="medium" />
 							<Tag text="Build" color="tertiary" size="medium" />
 							<Tag text="Share" color="green" size="medium" />
 							<Tag text="Earn" color="secondary" size="medium" />
 						</div>
-						<h1 className="my-5">Learn how to build in
+						<h1 className="mb-2 my-5">Learn how to build in
 							a true Decentralized
 							Web</h1>
-						<p>Learn to build for many use cases in the user controlled internet in one place.</p>
+						<p className="mb-5">Learn to build for many use cases in the user controlled internet in one place.</p>
 
 						<div className={styles["subscribe"]}>
 							<form className="flex flex-col md:flex-row mt-auto md:mt-8">
@@ -109,7 +109,7 @@ const Home: NextPage = () => {
 									text="Subscribe"
 								/>
 							</form>
-							<p className="mt-5">Subscribe to get our certification course emailed to you daily</p>
+							<p className="my-5">Subscribe to get our certification course emailed to you daily</p>
 						</div>
 					</div>
 					<div className="">
@@ -118,7 +118,6 @@ const Home: NextPage = () => {
 							width={629.82}
 							src={Banner}
 							alt="banner"
-							className={styles.banner}
 							priority={true}
 						/>
 					</div>

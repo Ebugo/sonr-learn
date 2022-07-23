@@ -22,7 +22,12 @@ import Grid from "./grid.svg";
 import Learn from "./learn.svg";
 import Box from "./box.svg";
 import User from "./user.svg";
-import Email from "./email.svg";
+import EmailNav from "./email.svg";
+import GithubNav from "./github-nav.svg";
+import DiscordNav from "./discord-nav.svg";
+import TwitterNav from "./twitter-nav.svg";
+import YoutubeNav from "./youtube-nav.svg";
+import InstagramNav from "./instagram-nav.svg";
 
 export {
 	Close,
@@ -49,5 +54,10 @@ export {
 	Learn,
 	Box,
 	User,
-	Email
+	EmailNav,
+	GithubNav,
+	DiscordNav,
+	YoutubeNav,
+	TwitterNav,
+	InstagramNav
 };
