@@ -11,11 +11,12 @@ import {
 	TwitterNav,
 	InstagramNav,
 	YoutubeNav,
-	GithubNav
+	GithubNav, LogoImg
 } from "../../assets";
 import { Button } from "../Shared/Button";
 
 import styles from "./styles.module.css";
+import {Image} from "../Shared";
 
 const Header = () => {
 	const [showMobileList, setshowMobileList] = useState(false);
@@ -53,7 +54,9 @@ const Header = () => {
 					<div className="flex justify-between">
 						<div className="flex items-center flex-grow">
 							<div className="cursor-pointer">
-								<Link href="/"><Logo /></Link>
+								<Link href="/">
+									<Image src={LogoImg} width={231} height={60} alt="Sonr" />
+								</Link>
 							</div>
 							<nav className={`${styles.bigNavLinks} ml-auto`}>
 								<ul>
@@ -167,11 +170,11 @@ const Header = () => {
 			>
 				<div className={``}>
 					<div className="flex justify-between items-center">
-						<Logo />
+						<Image src={LogoImg} width={165} height={40} alt="Sonr" />
 						<Hamburger onClick={() => setshowMobileList(true)} />
 					</div>
 					<div
-						className={`fixed inset-0 bg-blue-500 ${
+						className={`fixed inset-0 bg-blue-100 ${
 							styles.mobileList
 						} ${showMobileList ? `block` : `hidden`}`}
 					>
@@ -181,10 +184,12 @@ const Header = () => {
 						/>
 
 						<div className={`${styles["nav-content"]} flex flex-col gap-5`}>
-								<div className="cursor-pointer">
-									<Link href="/"><Logo /></Link>
+								<div className="cursor-pointer m-5 mb-10">
+									<Link href="/">
+										<Image src={LogoImg} width={165} height={40} alt="Sonr" />
+									</Link>
 								</div>
-								<nav className={`${styles.mobileNavLinks} text-white`}>
+								<nav className={`${styles.mobileNavLinks}`}>
 									<ul>
 										<li>
 											<Link href="/tutorials">Tutorials</Link>

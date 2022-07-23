@@ -14,6 +14,7 @@ import Program1 from "./program1.png";
 import Program2 from "./program2.png";
 import Program3 from "./program3.png";
 import HoneyComb from "./honey-comb.png";
+import LogoImg from "./logo.png";
 
 export {
 	Consensus,
@@ -31,5 +32,6 @@ export {
 	Program1,
 	Program2,
 	Program3,
-	HoneyComb
+	HoneyComb,
+	LogoImg
 };

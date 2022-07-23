@@ -1,8 +1,8 @@
 import React from "react";
-import { Logo } from "../../assets";
+import {Logo, LogoImg} from "../../assets";
 
 import styles from "./styles.module.css";
-import {Button, Input} from "../Shared";
+import {Button, Image, Input} from "../Shared";
 import Link from "next/dist/client/link";
 
 const Footer = () => {
@@ -31,7 +31,7 @@ const Footer = () => {
 				<div className="">
 					<div className="grid grid-cols-2 md:grid-cols-4 gap-10">
 						<div className={`${styles["logo-container"]} col-span-2 md:col-span-1`}>
-							<Logo />
+							<Image src={LogoImg} width={165} height={40} alt="Sonr" />
 						</div>
 						<div className="col-span-1">
 							<h6>Learning</h6>
