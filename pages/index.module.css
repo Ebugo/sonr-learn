@@ -154,12 +154,12 @@
 }
 
 .container .community-container .community-container-scroll {
-  overflow-x: auto;
   border-radius: 10px;
 }
 
 .container .community-container .image-container {
   min-width: 408px;
+  width: 408px;
   height: 290px;
 }
 
@@ -312,5 +312,22 @@
   .container .programs-container .icon-container {
     height: 70px!important;
     width: 70px!important;
+  }
+
+  .container .community-container .image-container {
+    height: auto;
+  }
+}
+
+
+@media all and (max-width: 500px){
+  .container .community-container .image-container {
+    min-width: 100%;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .container .community-container .arrow-container:last-child {
+    margin-left: auto;
   }
 }

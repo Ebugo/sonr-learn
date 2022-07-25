@@ -34,7 +34,7 @@ const Header = () => {
 
 	const programNavItems = [
 		{title: "Certification", url: "/programs"},
-		{title: "Hackathons", url: "#"},
+		{title: "Hackathons", url: "/#upcoming-events"},
 		{title: "Events", url: "/#upcoming-events"},
 		{title: (
 			<span className="text-grey-100 flex items-center">
@@ -42,7 +42,7 @@ const Header = () => {
 				<small className="coming-soon whitespace-nowrap">Coming soon</small>
 			</span>
 			),
-			url: "/programs"
+			url: "#"
 		},
 	];
 
@@ -70,46 +70,44 @@ const Header = () => {
 										<Link href="/tutorials">Tutorials</Link>
 									</li>
 									<li>
-										<Link href="/programs">
-											<div className="flex items-center">
-												<Menu as="div" className={`${styles["dropdown"]} ${styles["programs-dropdown"]} relative inline-block text-left`}>
-													<div>
-														<Menu.Button className="inline-flex items-center justify-center w-full">
-															Programs <ArrowDown className="inline ml-2" />
-														</Menu.Button>
-													</div>
+										<div className="flex items-center">
+											<Menu as="div" className={`${styles["dropdown"]} ${styles["programs-dropdown"]} relative inline-block text-left`}>
+												<div>
+													<Menu.Button className="inline-flex items-center justify-center w-full">
+														Programs <ArrowDown className="inline ml-2" />
+													</Menu.Button>
+												</div>
 
-													<Transition
-														as={React.Fragment}
-														enter="transition ease-out duration-100"
-														enterFrom="transform opacity-0 scale-95"
-														enterTo="transform opacity-100 scale-100"
-														leave="transition ease-in duration-75"
-														leaveFrom="transform opacity-100 scale-100"
-														leaveTo="transform opacity-0 scale-95"
-													>
-														<Menu.Items className={`${styles["dropdown-content"]} bg-white dark:bg-black-100 origin-top-left absolute left-0 mt-3 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none px-3 py-4`}>
-															<div className="py-1">
-																{programNavItems.map(({title, url}, i) => (
-																	<Menu.Item key={i}>
-																		{({active}) => (
-																			<a href={url}
-																			   className={classNames(
-																				   active ? 'bg-grey-100 text-gray-900' : 'text-gray-700',
-																				   `${styles["dropdown-item"]} px-1 py-2 text-sm flex`
-																			   )}
-																			>
-																				<span className="px-3 py-1">{title}</span>
-																			</a>
-																		)}
-																	</Menu.Item>
-																))}
-															</div>
-														</Menu.Items>
-													</Transition>
-												</Menu>
-											</div>
-										</Link>
+												<Transition
+													as={React.Fragment}
+													enter="transition ease-out duration-100"
+													enterFrom="transform opacity-0 scale-95"
+													enterTo="transform opacity-100 scale-100"
+													leave="transition ease-in duration-75"
+													leaveFrom="transform opacity-100 scale-100"
+													leaveTo="transform opacity-0 scale-95"
+												>
+													<Menu.Items className={`${styles["dropdown-content"]} bg-white dark:bg-black-100 origin-top-left absolute left-0 mt-3 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none px-3 py-4`}>
+														<div className="py-1">
+															{programNavItems.map(({title, url}, i) => (
+																<Menu.Item key={i}>
+																	{({active}) => (
+																		<a href={url}
+																		   className={classNames(
+																			   active ? 'bg-grey-100 text-gray-900' : 'text-gray-700',
+																			   `${styles["dropdown-item"]} px-1 py-2 text-sm flex`
+																		   )}
+																		>
+																			<span className="px-3 py-1">{title}</span>
+																		</a>
+																	)}
+																</Menu.Item>
+															))}
+														</div>
+													</Menu.Items>
+												</Transition>
+											</Menu>
+										</div>
 									</li>
 									<li>
 										<div className="flex items-center">

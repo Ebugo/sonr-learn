@@ -16,10 +16,22 @@ import {
 	Zkp
 } from "../assets";
 import {tutorials, events} from "../data";
-import React, {useEffect, useState} from "react";
+import React, {createRef, Ref, useEffect, useState} from "react";
 import {useRouter} from "next/router";
 import {UpcomingEvents} from "../components/UpcomingEvents";
 import {SuggestedTutorials} from "../components/SuggestedTutorials";
+import Flickity from 'react-flickity-component';
+import "flickity/css/flickity.css";
+
+const flickityOptions = {
+	initialIndex: 1,
+	// freeScroll: true,
+	// wrapAround: false,
+	// autoPlay: false,
+	// pauseAutoPlayOnHover: true,
+	prevNextButtons: false,
+	pageDots: false,
+};
 
 
 const Home: NextPage = () => {
@@ -29,6 +41,8 @@ const Home: NextPage = () => {
 	const { push } = useRouter();
 
 	let toggle: any = null;
+
+	const flickityRef: Ref<any> = createRef();
 
 	//constants
 	const technologies = [
@@ -70,6 +84,15 @@ const Home: NextPage = () => {
 		setActiveTechCard(cardIndex);
 		clearTimeout(toggle);
 	}
+
+	const handleNext = () => {
+		flickityRef.current.flkty.next();
+	};
+
+	const handlePrevious = () => {
+		flickityRef.current.flkty.previous();
+	};
+
 
 	useEffect(()=>{
 		handleTechsToggle();
@@ -210,30 +233,40 @@ const Home: NextPage = () => {
 
 				<section className={`container ${styles["community-container"]}`}>
 					<h3 className="my-8 md:my-10">Participate in our community bounty programs</h3>
-					<div className={`${styles["community-container-scroll"]} flex gap-10 bg-blue-700 p-5 md:p-10`}>
-						{
-							[1,2,3,4,5,6,7,8,9].map((community, i)=>(
-								<div
-									key={i}
-									className={styles["image-container"]}
-								>
-									<Image
-										height={290}
-										width={408}
-										src={Community}
-										alt="community"
-										className={""}
-										priority={true}
-									/>
-								</div>
-							))
-						}
+					<div className={`${styles["community-container-scroll"]} gap-10 bg-blue-700 p-5 md:p-10`}>
+						<Flickity
+							ref={flickityRef}
+							className={"carousel"} // default ''
+							elementType={"div"} // default 'div'
+							options={flickityOptions} // takes flickity options {}
+							disableImagesLoaded={false} // default false
+							reloadOnUpdate // default false
+							static={true}
+						>
+							{
+								[1,2,3,4,5,6,7,8,9].map((community, i)=>(
+									<div
+										// key={i}
+										className={`${styles["image-container"]} ${i<=8 && " pr-5 "}`}
+									>
+										<Image
+											height={290}
+											width={408}
+											src={Community}
+											alt="community"
+											className={""}
+											priority={true}
+										/>
+									</div>
+								))
+							}
+						</Flickity>
 					</div>
 					<div className="flex justify-end pt-10">
-						<span className={styles["arrow-container"]}>
+						<span className={styles["arrow-container"]} onClick={handlePrevious}>
 							<ArrowCircleRight />
 						</span>
-						<span className={`ml-20 ${styles["arrow-container"]}`}>
+						<span className={`ml-20 ${styles["arrow-container"]}`} onClick={handleNext}>
 							<ArrowCircleRight />
 						</span>
 					</div>
