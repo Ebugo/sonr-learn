@@ -175,10 +175,12 @@ const Header = () => {
 				className={`${styles.container} ${styles.smallNav} py-5 xl:hidden container sticky top-0 z-10`}
 			>
 				<div className={``}>
-					<div className="flex justify-between items-center" onClick={()=>push("/")}>
-						<Link passHref={true} href="/">
-							<Image className="cursor-pointer" src={LogoImg} width={165} height={40} alt="Sonr" />
-						</Link>
+					<div className="flex justify-between items-center">
+						<div onClick={()=>push("/")}>
+							<Link passHref={true} href="/">
+								<Image className="cursor-pointer" src={LogoImg} width={165} height={40} alt="Sonr" />
+							</Link>
+						</div>
 						<Hamburger onClick={() => setshowMobileList(true)} />
 					</div>
 					<div
