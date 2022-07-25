@@ -20,17 +20,20 @@ import React, {createRef, Ref, useEffect, useState} from "react";
 import {useRouter} from "next/router";
 import {UpcomingEvents} from "../components/UpcomingEvents";
 import {SuggestedTutorials} from "../components/SuggestedTutorials";
-import Flickity from 'react-flickity-component';
+import FlickityComponent from 'react-flickity-component';
 import "flickity/css/flickity.css";
 
 const flickityOptions = {
-	initialIndex: 1,
-	// freeScroll: true,
-	// wrapAround: false,
+	// initialIndex: 0,
+	// initialIndex: '.is-initial-select',
+	freeScroll: true,
+	// wrapAround: true,
 	// autoPlay: false,
 	// pauseAutoPlayOnHover: true,
+	contain: true,
 	prevNextButtons: false,
 	pageDots: false,
+	adaptiveHeight: true
 };
 
 
@@ -45,6 +48,8 @@ const Home: NextPage = () => {
 	const flickityRef: Ref<any> = createRef();
 
 	//constants
+	const Flickity: any = FlickityComponent;
+
 	const technologies = [
 		{
 			title: "Peer-to-Peer technology",
@@ -99,6 +104,11 @@ const Home: NextPage = () => {
 	}, [activeTechCard])
 
 
+	// @ts-ignore
+	// @ts-ignore
+	// @ts-ignore
+	// @ts-ignore
+	// @ts-ignore
 	return (
 		<AppLayout>
 			<div className={styles["container"]}>
@@ -242,11 +252,11 @@ const Home: NextPage = () => {
 							disableImagesLoaded={false} // default false
 							reloadOnUpdate // default false
 							static={true}
-						>
+							>
 							{
 								[1,2,3,4,5,6,7,8,9].map((community, i)=>(
 									<div
-										// key={i}
+										key={i}
 										className={`${styles["image-container"]} ${i<=8 && " pr-5 "}`}
 									>
 										<Image
@@ -264,10 +274,10 @@ const Home: NextPage = () => {
 					</div>
 					<div className="flex justify-end pt-10">
 						<span className={styles["arrow-container"]} onClick={handlePrevious}>
-							<ArrowCircleRight />
+							<ArrowCircleRight onClick={handlePrevious} />
 						</span>
 						<span className={`ml-20 ${styles["arrow-container"]}`} onClick={handleNext}>
-							<ArrowCircleRight />
+							<ArrowCircleRight onClick={handleNext} />
 						</span>
 					</div>
 				</section>
