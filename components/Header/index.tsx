@@ -175,7 +175,7 @@ const Header = () => {
 				className={`${styles.container} ${styles.smallNav} py-5 xl:hidden container sticky top-0 z-10`}
 			>
 				<div className={``}>
-					<div className="flex justify-between items-center">
+					<div className="flex justify-between items-center" onClick={()=>push("/")}>
 						<Link passHref={true} href="/">
 							<Image className="cursor-pointer" src={LogoImg} width={165} height={40} alt="Sonr" />
 						</Link>
@@ -192,7 +192,7 @@ const Header = () => {
 						/>
 
 						<div className={`${styles["nav-content"]} flex flex-col gap-5`}>
-								<div className="cursor-pointer m-5 mb-10">
+								<div className="cursor-pointer m-5 mb-10" onClick={()=>push("/")}>
 									<Link passHref={true} href="/">
 										<Image src={LogoImg} width={165} height={40} alt="Sonr" />
 									</Link>
@@ -214,7 +214,7 @@ const Header = () => {
 																<Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
 																	<div>
 																		{programNavItems.map(({title, url}, i) => (
-																			<div key={title}>
+																			<div key={i}>
 																				<a href={url}
 																				   className={classNames(
 																					   'hover:bg-grey-100 hover:text-gray-900 text-gray-700',
