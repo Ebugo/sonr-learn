@@ -34,10 +34,10 @@ const ProgramsList = () => {
 
 			<section className="py-5 md:py-12">
 				{programs.map(({ title, header, desc, image, tags}, i) => (
-					<>
-						<ProgramCard key={i} title={title} header={header} id={i} image={image} desc={desc} tags={tags} />
+					<div key={i}>
+						<ProgramCard title={title} header={header} id={i} image={image} desc={desc} tags={tags} />
 						<hr className={`${i!== programs.length-1 ? "block" : "hidden"} mt-14 mb-5 bg-grey-100`} />
-					</>
+					</div>
 				))}
 			</section>
 

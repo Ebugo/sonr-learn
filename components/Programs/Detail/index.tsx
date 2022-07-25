@@ -108,7 +108,7 @@ const ProgramsDetail = () => {
 					<div className={`${styles["submit-project"]} flex relative p-5 py-10 xl:p-16`}>
 						<div className="md:w-4/6 flex flex-col">
 							<h4>Submit your project url</h4>
-							<form className="flex flex-col md:flex-row items-center mt-auto md:mt-8">
+							<form className="flex flex-col md:flex-row items-center my-3">
 								<Input
 									name="project_link"
 									placeholder="Project link"

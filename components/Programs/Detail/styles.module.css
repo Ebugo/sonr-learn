@@ -114,8 +114,9 @@
 
 .container .submit-project {
   background-color: var(--app-blue-500);
-  background-image: url("../../../assets/svgs/award-light.svg");
-  background-position: calc(100% - 17px) 100%;
+  background-image: url("../../../assets/pngs/award-light.png");
+  background-position: bottom right;
+  background-size: contain;
   border-radius: 10px;
   background-repeat: no-repeat;
   min-height: 224px;

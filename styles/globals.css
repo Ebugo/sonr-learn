@@ -83,3 +83,16 @@ p,
 span {
   font-weight: 400;
 }
+
+.coming-soon {
+  font-family: var(--app-primary-font-bold);
+  background: #0B9B83;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  padding-left: 5px;
+  padding-right: 5px;
+}

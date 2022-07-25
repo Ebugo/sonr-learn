@@ -1,5 +1,4 @@
 import {Disclosure, Menu, Transition } from "@headlessui/react";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import {
@@ -17,6 +16,7 @@ import { Button } from "../Shared/Button";
 
 import styles from "./styles.module.css";
 import {Image} from "../Shared";
+import Link from "next/dist/client/link";
 
 const Header = () => {
 	const [showMobileList, setshowMobileList] = useState(false);
@@ -36,8 +36,14 @@ const Header = () => {
 		{title: "Certification", url: "/programs"},
 		{title: "Hackathons", url: "#"},
 		{title: "Events", url: "/#upcoming-events"},
-		{title: "Grants/Bounties", url: "#"},
-		{title: "Fellowship", url: "/programs"},
+		{title: (
+			<span className="text-grey-100 flex items-center">
+				<span className="mr-2">Fellowship</span>
+				<small className="coming-soon whitespace-nowrap">Coming soon</small>
+			</span>
+			),
+			url: "/programs"
+		},
 	];
 
 	const classNames = (...classes: string[]) => {
@@ -53,8 +59,8 @@ const Header = () => {
 				<div className="">
 					<div className="flex justify-between">
 						<div className="flex items-center flex-grow">
-							<div className="cursor-pointer">
-								<Link href="/">
+							<div className="cursor-pointer" onClick={()=>push("/")}>
+								<Link passHref={true} scroll={true} href="/">
 									<Image src={LogoImg} width={231} height={60} alt="Sonr" />
 								</Link>
 							</div>
@@ -66,7 +72,7 @@ const Header = () => {
 									<li>
 										<Link href="/programs">
 											<div className="flex items-center">
-												<Menu as="div" className={`${styles["dropdown"]} relative inline-block text-left`}>
+												<Menu as="div" className={`${styles["dropdown"]} ${styles["programs-dropdown"]} relative inline-block text-left`}>
 													<div>
 														<Menu.Button className="inline-flex items-center justify-center w-full">
 															Programs <ArrowDown className="inline ml-2" />
@@ -85,7 +91,7 @@ const Header = () => {
 														<Menu.Items className={`${styles["dropdown-content"]} bg-white dark:bg-black-100 origin-top-left absolute left-0 mt-3 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none px-3 py-4`}>
 															<div className="py-1">
 																{programNavItems.map(({title, url}, i) => (
-																	<Menu.Item key={title}>
+																	<Menu.Item key={i}>
 																		{({active}) => (
 																			<a href={url}
 																			   className={classNames(
@@ -170,7 +176,9 @@ const Header = () => {
 			>
 				<div className={``}>
 					<div className="flex justify-between items-center">
-						<Image src={LogoImg} width={165} height={40} alt="Sonr" />
+						<Link passHref={true} href="/">
+							<Image className="cursor-pointer" src={LogoImg} width={165} height={40} alt="Sonr" />
+						</Link>
 						<Hamburger onClick={() => setshowMobileList(true)} />
 					</div>
 					<div
@@ -185,7 +193,7 @@ const Header = () => {
 
 						<div className={`${styles["nav-content"]} flex flex-col gap-5`}>
 								<div className="cursor-pointer m-5 mb-10">
-									<Link href="/">
+									<Link passHref={true} href="/">
 										<Image src={LogoImg} width={165} height={40} alt="Sonr" />
 									</Link>
 								</div>

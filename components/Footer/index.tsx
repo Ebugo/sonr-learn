@@ -37,7 +37,9 @@ const Footer = () => {
 							<h6>Learning</h6>
 							<ul>
 								<li><Link href="/tutorials">Tutorials</Link></li>
-								<li><Link href="/programs">Missions (Certification courses)</Link></li>
+								<li><Link href="/programs">
+									<span className="cursor-pointer">Missions <small>(Certification courses)</small></span>
+								</Link></li>
 								<li><Link href="/#">Demo</Link></li>
 								<li><Link href="/programs">Challenge Projects</Link></li>
 							</ul>
@@ -46,8 +48,11 @@ const Footer = () => {
 							<h6>Programs</h6>
 							<ul>
 								<li><Link href="/programs">Hackathons</Link></li>
-								<li><Link href="/#upcoming-events">Community events</Link></li>
-								<li><Link href="/#">Developer ranking</Link></li>
+								<li><Link scroll={true} href="/#upcoming-events">Community events</Link></li>
+								<li className="text-grey-100 flex items-center">
+									<span className="mr-2">Developer ranking</span>
+									<small className="coming-soon">Coming soon</small>
+								</li>
 								<li><Link href="/programs">Outreach programs</Link></li>
 							</ul>
 						</div>
