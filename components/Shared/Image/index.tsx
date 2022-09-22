@@ -1,8 +1,8 @@
 import React from "react";
-import Image from "next/image";
+import NextImage, {StaticImageData} from "next/image";
 
 type ComponentProps = {
-  src: string;
+  src: string | StaticImageData;
   alt?: string;
   priority?: boolean;
   width: number;
@@ -12,7 +12,7 @@ type ComponentProps = {
   className?: string;
 };
 
-function OptimizedImage({
+function Image({
   src,
   alt,
   priority,
@@ -20,10 +20,10 @@ function OptimizedImage({
   height,
   blurDataURL,
   className,
-  objectFit = "contain"
+  objectFit = "cover"
 }: ComponentProps) {
   return (
-    <Image
+    <NextImage
       className={className}
       objectFit={objectFit}
       priority={priority || false}
@@ -32,9 +32,9 @@ function OptimizedImage({
       width={width}
       height={height}
       placeholder="blur"
-      blurDataURL={blurDataURL}
+      blurDataURL={typeof src === "string" ? src : ("blurDataURL" in src && src?.blurDataURL) || ""}
     />
   );
 }
 
-export { OptimizedImage };
+export { Image };

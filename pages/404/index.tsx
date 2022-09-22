@@ -8,11 +8,11 @@ import styles from './styles.module.css';
 const Error: NextPage = () => {
 	return (
 		<AppLayout>
-			<div className={styles["container"]}>
+			<div className={`container md:px-16 lg:px-28 ${styles["container"]}`}>
 				<Head>
 					<title>Sonr Learn | Page not found</title>
 				</Head>
-				<section className={`${styles["error-container"]} flex flex-col items-center justify-center h-full`}>
+				<section className={`${styles["error-container"]} flex flex-col items-center justify-center h-96`}>
 					<h3 className="">Page not found!</h3>
 
 					<div className="mt-10">

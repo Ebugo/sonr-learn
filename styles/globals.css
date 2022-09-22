@@ -1,17 +1,55 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap");
+@font-face {
+  font-family: "THICCCBOI-Black";
+  src: url("./fonts/THICCCBOI-Black.ttf");
+}
+@font-face {
+  font-family: "THICCCBOI-Bold";
+  src: url("./fonts/THICCCBOI-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "THICCCBOI-ExtraBold";
+  src: url("./fonts/THICCCBOI-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "THICCCBOI-Medium";
+  src: url("./fonts/THICCCBOI-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "THICCCBOI-Regular";
+  src: url("./fonts/THICCCBOI-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "THICCCBOI-SemiBold";
+  src: url("./fonts/THICCCBOI-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "THICCCBOI-ThicccAF";
+  src: url("./fonts/THICCCBOI-ThicccAF.ttf") format("truetype");
+}
 
 :root {
   --app-gray-100: #e5e5e5;
+  --app-gray-200: #AEACB8;
   --app-grey-100: #f4f4f4;
+  --app-grey-200: #9693A2;
   --app-black-100: #424141;
   --app-black-400: #0e040c;
-  --app-blue-100: #55ceff;
+  --app-black-500: #13111A;
+  --app-blue-100: #F2F8FF;
+  --app-blue-200: #D6EDFF;
+  --app-blue-300: #55ceff;
   --app-blue-400: #1792ff;
+  --app-blue-500: #0D6ECC;
+  --app-blue-600: #054D99;
+  --app-blue-700: #003066;
   --app-green-400: #0f6664;
+  --app-green-500: #006655;
+  --app-red-500: #CC154A;
   --app-white: #ffffff;
-  --app-primary-font: "Josefin Sans", "sans-serif";
-  --app-border-radius-sm: 10px;
-  --app-border-radius-md: 20.9836px;
+  --app-primary-font: "THICCCBOI-Regular", "sans-serif";
+  --app-primary-font-bold: "THICCCBOI-Bold", "sans-serif";
+  --app-border-radius-sm: 6px;
+  --app-border-radius-md: 21px;
 }
 
 html,
@@ -44,4 +82,17 @@ h5 {
 p,
 span {
   font-weight: 400;
+}
+
+.coming-soon {
+  font-family: var(--app-primary-font-bold);
+  background: #0B9B83;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  padding-left: 5px;
+  padding-right: 5px;
 }

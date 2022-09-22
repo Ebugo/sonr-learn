@@ -1,13 +1,14 @@
 import Head from 'next/head';
 import { ReactComponentElement } from 'react';
 import { Footer, Header } from '..';
+import styles from './styles.module.css';
 
 
-const AppLayout = ({ children }: { children: ReactComponentElement<any> }) => {
+const AppLayout = ({ children, showFooter = true }: { children: ReactComponentElement<any>, showFooter?: boolean }) => {
 	return (
-		<div>
+		<div className={styles["wrapper"]}>
 			<Head>
-				<link rel="icon" href="./favicon.svg" />
+				<link rel="icon" href="./favicon.ico" />
 				<meta
 					name="viewport"
 					content="width=device-width, initial-scale=1"
@@ -16,11 +17,11 @@ const AppLayout = ({ children }: { children: ReactComponentElement<any> }) => {
 				<meta name="description" content="Sonr Learn" />
 				<meta name="keywords" content="Sonr Learn"></meta>
 			</Head>
-			{/*<Header />*/}
-			<main className={`mb-8 container pt-24 md:pt-0 md:px-16 lg:px-28 xl:px-32 min-h-screen`}>
+			<Header />
+			<main className={`${styles["container"]} pt-10 md:pt-14`}>
 				{children}
 			</main>
-			{/*<Footer />*/}
+			{showFooter && <Footer/>}
 		</div >
 	);
 };

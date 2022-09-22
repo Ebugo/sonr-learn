@@ -1,0 +1,27 @@
+.events-container h3 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 800;
+    font-family: var(--app-primary-font-bold);
+}
+
+@media all and (min-width: 768px) {
+    .events-container h3 {
+        font-size: 1.35rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media all and (min-width: 992px) {
+    .events-container h3 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .events-container h3 {
+        font-size: 1.75rem;
+        line-height: 1.75rem;
+    }
+}

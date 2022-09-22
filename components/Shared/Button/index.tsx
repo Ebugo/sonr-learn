@@ -9,8 +9,9 @@ interface Props {
   className?: string | "";
   type?: "button" | "submit" | "reset";
   text?: string | "";
-  variant?: "contained" | "outlined";
+  variant?: "contained" | "outlined" | "light";
   buttonStyle?: "rounded" | "curved";
+  disabled?: boolean;
 }
 
 const Button: React.FC<Props> = ({
@@ -21,15 +22,16 @@ const Button: React.FC<Props> = ({
   text,
   variant = "contained",
   buttonStyle = "curved",
+  disabled = false,
   ...rest
 }) => {
   let containerClass = styles.container;
-  containerClass += ` py-3 px-6 ${styles[buttonStyle]} ${styles[variant]}`;
   if (className) containerClass += ` ${className}`;
+  containerClass += ` py-3 px-6 ${styles[buttonStyle]} ${styles[variant]}`;
 
 
   return (
-    <button type={type} onClick={onClick} className={containerClass} {...rest}>
+    <button type={type} onClick={onClick} className={containerClass} disabled={disabled} {...rest}>
       <span>{text || children}</span>
     </button>
   );

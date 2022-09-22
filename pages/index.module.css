@@ -1,20 +1,24 @@
 .container {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .container h1 {
-  font-size: 2rem;
-  line-height: 2.4rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+  font-family: var(--app-primary-font-bold);
 }
 
 .container h2 {
-  font-size: 1.75rem;
-  line-height: 2.43rem;
+  font-size: 1.35rem;
+  line-height: 1.5rem;
 }
 
 .container h3 {
-  font-size: 1.75rem;
-  line-height: 2.18rem;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 800;
+  font-family: var(--app-primary-font-bold);
 }
 
 .container P {
@@ -23,42 +27,236 @@
   font-weight: 400;
 }
 
+.container .banner {
+
+}
+
+.container .banner div:first-child {
+}
+
+.container .banner div:first-child button {
+  width: fit-content;
+}
+
+.container .banner div:last-child {
+}
+
+.container .banner button {
+  font-size: 14px;
+}
+
+.container .banner button svg {
+}
+
+.container .subscribe {
+}
+
+.container .subscribe form input.subscribe-input,
+.container .subscribe form > div, .container .subscribe form > button {
+  width: 100%;
+}
+
+.container input.subscribe-input::placeholder {
+  color: var(--app-grey-200);
+}
+
+.container .subscribe p {
+  font-size: 14px;
+  line-height: 16px;
+  color: #676376;
+}
+
+.container .subscribe button {
+}
+
+.container hr {
+  height: 1px;
+  background: var(--app-gray-200);
+  border: var(--app-gray-200);
+  border-radius: 1px;
+}
+
+.container .programs-container > div > div {
+  border-radius: 10px;
+  color: var(--app-white);
+  background-image: url("../assets/pngs/honey-comb.png");
+  background-size: contain;
+  background-position: 100% 0px;
+  background-repeat: no-repeat;
+}
+
+.container .programs-container > div > div .icon-container {
+  width: 104px;
+  height: 104px;
+  border-radius: 15px;
+  background: var(--app-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .programs-container > div > div h5 {
+  font-family: var(--app-primary-font-bold);
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: -0.01em;
+}
+
+.container .programs-container > div > div h5 span {
+  font-family: var(--app-primary-font);
+}
+
+.container .programs-container > div > div p {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 28px;
+}
+
+.container .programs-container > div > div > div span {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #B9E2FF;
+}
+
+.container .programs-container > div > div:first-child button {
+  color: var(--app-black-500);
+  background: var(--app-blue-200);
+  font-size: 16px;
+  font-family: var(--app-primary-font-bold);
+  font-weight: 800;
+}
+
+.container .programs-container > div > div:last-child > svg:first-child {
+  position: absolute;
+  right: 50px;
+  top: -75px;
+}
+
+.container .programs-container > div > div:last-child > svg:nth-child(2) {
+  position: absolute;
+  right: 8px;
+  top: 10px;
+}
+
+.container .tutorials-sample-container {
+  /*overflow-x: hidden;*/
+}
+
+.container .tutorials-sample > div:nth-child(2) {
+  border-radius: 15px;
+}
+
+.container .tutorials-sample > div:nth-child(2) * {
+  box-shadow: 0px 4px 8px -4px rgba(22, 34, 51, 0.12), 0px 16px 20px rgba(22, 34, 51, 0.08);
+  border-radius: 15px;
+}
+
+.container .community-container .community-container-scroll {
+  border-radius: 10px;
+}
+
+.container .community-container .image-container {
+  min-width: 408px;
+  width: 408px;
+  height: 290px;
+}
+
+.container .community-container .arrow-container {
+  background: var(--app-blue-700);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 12px -4px rgba(22, 34, 51, 0.12);
+  filter: drop-shadow(0px 16px 32px rgba(22, 34, 51, 0.16));
+  cursor: pointer;
+}
+
+.container .community-container .arrow-container:first-child {
+  transform: rotate(180deg);
+}
+
 @media all and (min-width: 768px) {
   .container h1 {
-    font-size: 3.6rem;
-    line-height: 3.6rem;
+    font-size: 1.65rem;
+    line-height: 1.75rem;
+    width: 80%;
   }
 
   .container h2 {
-    font-size: 3rem;
-    line-height: 3rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
   }
 
   .container h3 {
-    font-size: 2.4rem;
-    line-height: 2.6rem;
+    font-size: 1.35rem;
+    line-height: 1.5rem;
   }
 
   .container P {
     font-size: 0.875rem;
     line-height: 1.5rem;
   }
+
+  .container .banner {
+  }
+
+  .container .banner > div {
+    width: 50%;
+  }
+
+  .container .banner button {
+    font-size: 16px;
+    transform: none;
+  }
+
+  .container .programs-container > div > div:last-child > svg:first-child {
+    position: absolute;
+    right: 150px;
+    top: -80px;
+  }
+
+  .container .programs-container > div > div:last-child > svg:nth-child(2) {
+    position: absolute;
+    right: 78px;
+    top: 24px;
+  }
+
+  .container .subscribe form .subscribe-input {
+    width: 62.34%;
+  }
+
+  .container .subscribe form > div, .container .subscribe form > button {
+    width: fit-content;
+  }
+
+  .container .tutorials-sample {
+    margin-right: -115px;
+  }
+
+  .container .tutorials-sample > div:first-child h3 {
+    width: 80%;
+  }
 }
 
 @media all and (min-width: 992px) {
   .container h1 {
-    font-size: 3.9rem;
-    line-height: 3.9rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
 
   .container h2 {
-    font-size: 3.2rem;
-    line-height: 3.2rem;
+    font-size: 1.65rem;
+    line-height: 1.6rem;
   }
 
   .container h3 {
-    font-size: 2.6rem;
-    line-height: 2.8rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
   }
 
   .container p {
@@ -69,25 +267,67 @@
 
 @media all and (min-width: 1024px) {
   .container h1 {
-    font-size: 3.6rem;
-    line-height: 4rem;
+    font-size: 3rem;
+    line-height: 2.75rem;
   }
 
   .container h2 {
-    font-size: 3.6rem;
-    line-height: 4rem;
+    font-size: 1.85rem;
+    line-height: 1.75rem;
   }
 
   .container h3 {
-    font-size: 3rem;
-    line-height: 4rem;
+    font-size: 1.75rem;
+    line-height: 1.75rem;
   }
 
   .container p {
-    font-size: 1.75rem;
+    font-size: 1rem;
     line-height: 2.2rem;
   }
 }
 
-@media all and (max-width: 767px) {
+@media all and (min-width: 1200px){
+}
+
+@media all and (min-width: 1280px){
+  .container .tutorials-sample > div:first-child {
+    width: 41.11%;
+  }
+}
+
+@media all and (max-width: 767px){
+  .container .programs-container p {
+    font-size: 15px !important;
+  }
+
+  .container .programs-container span {
+    font-size: 14px !important;
+  }
+
+  .container .programs-container svg {
+    transform: scale(0.75);
+  }
+
+  .container .programs-container .icon-container {
+    height: 70px!important;
+    width: 70px!important;
+  }
+
+  .container .community-container .image-container {
+    height: auto;
+  }
+}
+
+
+@media all and (max-width: 500px){
+  .container .community-container .image-container {
+    min-width: 100%;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .container .community-container .arrow-container:last-child {
+    margin-left: auto;
+  }
 }
