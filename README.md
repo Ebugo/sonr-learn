@@ -4,7 +4,7 @@
 
 `Sonr Learn` is an open-source learning platform created by the Sonr Developer Community. The initiative designed to bring extensive education about the Sonr Ecosystem to the global community. The program involves producing learning content, graphical explanations, and small demo projects on the uses of the different technologies and products in the Sonr Ecosystem.
 
-![Sonr Learn Banner](slides/Page8.png "Let's go!")
+![Sonr Learn Banner](assets/pngs/ReadMe.png)
 
 
 ## How do I get started?
