@@ -12,18 +12,19 @@ interface Props {
   duration: string;
   image: any;
   date: string;
+  slug: string;
   tags: string[];
 }
 
 
-const TutorialCard: React.FC<Props> = ({ title, author, duration, image, tags, date }) => {
+const TutorialCard: React.FC<Props> = ({ title, author, duration, image, tags, date, slug }) => {
     const { push } = useRouter();
 
 
   return (
       <div
           className={`${styles["container"]} flex flex-col mx-auto`}
-        onClick={()=>push("/tutorials/1")}
+        onClick={()=>push(`/tutorials/${slug}`)}
       >
         <div>
           <Image src={image} width={397} height={282.53} />
