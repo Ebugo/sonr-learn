@@ -27,7 +27,10 @@ As you're working on code, some things to think about:
 
 ### What should I do before submitting the PR?
 
-- 
+-  Run yarn confirm which will make sure your files are consistently formatted, lint the code base looking for problems and then actually building the site locally to ensure no build problems
+- If you see warnings or errors please fix.
+- Also, this step runs Prettier so some files may have changed and need to be checked in.
+
 
 Now you're ready to submit your PR.
 
