@@ -10,8 +10,7 @@
 ## How do I get started?
 
 Please read our [CONTRIBUTING Guide](CONTRIBUTING.md) to get started. We ask
-that you are a member of Developer DAO to contribute, since our project uses
-various Developer DAO planning and communication tools, such as Discord.
+that you join the [Sonr community](https://community.sonr.io) to contribute.
 
 ## How to contribute code
 
