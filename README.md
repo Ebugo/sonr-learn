@@ -76,8 +76,8 @@ to the guide can be found
 
 **Fork this repo, clone forked repo locally and `cd` into the repo:**
 
-    git clone https://github.com/[YOUR GITHUB HANDLE HERE]/academy.git
-    cd academy/
+    git clone https://github.com/[YOUR GITHUB HANDLE HERE]/sonr-learn.git
+    cd sonr-learn/
 
 **Installation and run:**
 
