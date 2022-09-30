@@ -173,5 +173,5 @@ details.
 
 ## Maintainers
 
-- [Michael Amoako](https://github.com/ma-sonr)
-- [Prad Nakula](https://github.com/prnk28)
+- [Michael](https://github.com/ma-sonr)
+- [Ian](https://github.com/6missedcalls)
