@@ -127,13 +127,17 @@ Use `git pull` to get your local version up-to-date with the master version:
 Reinstall with `npm` or `yarn`:
 
     npm install 
+
 or 
+
     yarn install
 
 Run the updated app:
 
     npm run dev 
+
 or 
+
     yarn dev
 
 ## Learn More
