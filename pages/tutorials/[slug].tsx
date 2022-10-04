@@ -8,10 +8,12 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { LessonProps } from '../../types';
+import { LessonDetailProps } from '../../types';
+import { getLessonPathData } from '../../helpers/getLessonPathData';
+import { getLessonData } from '../../helpers/getLessonData';
 
 
-const TutorialDetail: NextPage<LessonProps> = ({ mdxSource, slug }) => {
+const TutorialDetail: NextPage<LessonDetailProps> = ({ mdxSource, slug }) => {
 	return (
 		<AppLayout>
 			<div className="container md:px-16 lg:px-28">
@@ -28,42 +30,17 @@ const TutorialDetail: NextPage<LessonProps> = ({ mdxSource, slug }) => {
 export default TutorialDetail;
 
 export const getStaticPaths = async () => {
-	const trackDir = path.join('lessons')
-
-	const topicDirectories = fs.readdirSync(trackDir)
-
-	const allPaths: {
-		params: {
-			lesson: string
-			slug: string
-		}
-	}[] = []
-
-	topicDirectories.forEach((topic: string) => {
-		const topicDirectory = path.join(trackDir, topic)
-		const files = fs.readdirSync(topicDirectory)
-
-		files.forEach((fileName: string) => {
-			const path = {
-				params: {
-					lesson: topic,
-					slug: fileName.replace('.mdx', ''),
-				},
-			}
-
-			allPaths.push(path)
-		})
-	})
-
 	return {
-		paths: allPaths,
+		paths: await getLessonPathData('tutorials'),
 		fallback: false, // if access path/slug that doesn't exist -> 404 page
 	}
 }
 
-export const getStaticProps = async ({ params: { lesson, slug } }: any) => {
-	const learn = fs.readFileSync(path.join('lessons', lesson, slug + '.mdx'))
-	const { data: metaData, content } = matter(learn)
-	const mdxSource = await serialize(content, { scope: metaData })
+// export const getStaticProps = async ({ params }: any) => {
+// export const getStaticProps = async ({ params: { lesson, slug } }: any) => {
+export const getStaticProps = async ({ params: { slug } }: any) => {
+	const lesson = 'tutorials';
+	const mdxSource = await getLessonData(lesson, slug);
+	// console.log({ mdxSource, lesson, slug })
 	return { props: { mdxSource: mdxSource, lesson, slug } }
 }
