@@ -84,7 +84,7 @@ to the guide can be found
     npm install
     npm run dev
 
-    or using yarn:
+or using yarn:
 
     yarn install
     yarn dev
@@ -126,11 +126,19 @@ Use `git pull` to get your local version up-to-date with the master version:
 
 Reinstall with `npm` or `yarn`:
 
-    npm install or yarn install
+    npm install 
+
+or 
+
+    yarn install
 
 Run the updated app:
 
-    npm run dev or yarn dev
+    npm run dev 
+
+or 
+
+    yarn dev
 
 ## Learn More
 
