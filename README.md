@@ -82,10 +82,15 @@ to the guide can be found
 **Installation and run:**
 
     npm install
-    npm dev
+    npm run dev
+
+or using yarn:
+
+    yarn install
+    yarn dev
 
 This will create a local instance of the app running and can be viewed at
-`http://localhost:5500` in your browser.
+`http://localhost:3000` in your browser.
 
 Also it's handy to install the Prettier plugin for your browser. You can then
 use it to automatically format files. It helps keep the code base tidy, for
@@ -119,13 +124,21 @@ Use `git pull` to get your local version up-to-date with the master version:
 
     git pull
 
-Reinstall with `npm`:
+Reinstall with `npm` or `yarn`:
 
-    npm install
+    npm install 
+
+or 
+
+    yarn install
 
 Run the updated app:
 
-    npm dev
+    npm run dev 
+
+or 
+
+    yarn dev
 
 ## Learn More
 
@@ -138,23 +151,6 @@ To learn more about Next.js, take a look at the following resources:
 You can check out
 [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your
 feedback and contributions are welcome!
-
-## Storybook
-
-This project uses [Storybook](https://storybook.js.org/). Storybook allows us to
-develop components in isolation from our app.
-
-Stories are loaded from `*.stories.(mdx|js|jsx|ts|tsx)` files in any directory.
-
-To use Storybook, run the `storybook` script:
-
-```bash
-yarn storybook
-```
-
-To learn more about how to write Storybook stories, check out the official
-[Intro to Storybook](https://storybook.js.org/tutorials/intro-to-storybook/)
-tutorial.
 
 ## Deploy on Vercel
 
