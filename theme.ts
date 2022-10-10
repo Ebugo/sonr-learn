@@ -205,6 +205,10 @@ export const theme = extendTheme({
       '& > * + *': {
         mt: '0.25rem',
       },
+      fontSize: '1rem',
+    },
+    li: {
+      fontSize: '1rem',
     },
     code: {
       bg: 'gray:300',

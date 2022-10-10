@@ -113,18 +113,18 @@ const TutorialsDetail: React.FC<{ mdxSource: MDXRemoteSerializeResult | any }> =
 				{Array.isArray(mdxSource?.scope?.tags) && mdxSource?.scope?.tags.length > 0 && (
 					<div className="flex flex-wrap gap-3 w-full mb-2">
 						{mdxSource?.scope?.tags?.map((tag: string, i: number) => (
-							<Tag key={i} text={tag} color={colors[Math.floor(Math.random() * 3) + 1]} />
+							<Tag key={i} text={tag} color={colors[Math.floor(Math.random() * 3)]} />
 						))}
 					</div>
 				)}
 				<h1 className="pb-4">{mdxSource?.scope?.title || "- -"}</h1>
 				<span className={`${styles["sub-text"]}`}>5mins Read</span>
 				<div className={`${styles["description"]} mt-6 mb-3 flex items-center`}>
-					<span className="flex items-center pr-5">
+					<span className="flex items-center">
 						<span className={`${styles["avatar"]} mr-3`}>{getAuthorInitials(mdxSource?.scope?.author)}</span>
 						{getAuthors(mdxSource?.scope?.author)}
 					</span>
-					<span className="ml-5">{mdxSource?.scope?.date || ''}</span>
+					{mdxSource?.scope?.date && <span className="ml-5 pl-5">{mdxSource?.scope?.date || ''}</span>}
 				</div>
 				<div className="">
 					<MDXRemote {...mdxSource} components={components} />
