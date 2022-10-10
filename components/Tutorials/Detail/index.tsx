@@ -104,15 +104,19 @@ const components: any = {
 
 
 const TutorialsDetail: React.FC<{ mdxSource: MDXRemoteSerializeResult | any }> = ({ mdxSource }) => {
-	console.log({mdxSource})
+	console.log({ mdxSource })
+	const colors = ["primary", "secondary", "tertiary", "green"];
+
 	return (
 		<div className={`${styles["container"]} flex flex-col md:flex-row`}>
 			<section className="pt-14 md:pt-4 md:order-1 order-2">
-				<div className="flex flex-wrap gap-3 w-full mb-2">
-					<Tag text="Consensus Mechanism" color="primary" />
-					<Tag text="Blockchain" color="secondary" />
-					<Tag text="Tutorial" color="tertiary" />
-				</div>
+				{Array.isArray(mdxSource?.scope?.tags) && mdxSource?.scope?.tags.length > 0 && (
+					<div className="flex flex-wrap gap-3 w-full mb-2">
+						{mdxSource?.scope?.tags?.map((tag: string, i: number) => (
+							<Tag key={i} text={tag} color={colors[Math.floor(Math.random() * 3) + 1]} />
+						))}
+					</div>
+				)}
 				<h1 className="pb-4">{mdxSource?.scope?.title || "- -"}</h1>
 				<span className={`${styles["sub-text"]}`}>5mins Read</span>
 				<div className={`${styles["description"]} mt-6 mb-3 flex items-center`}>
