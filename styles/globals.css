@@ -2,26 +2,32 @@
   font-family: "THICCCBOI-Black";
   src: url("./fonts/THICCCBOI-Black.ttf");
 }
+
 @font-face {
   font-family: "THICCCBOI-Bold";
   src: url("./fonts/THICCCBOI-Bold.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "THICCCBOI-ExtraBold";
   src: url("./fonts/THICCCBOI-ExtraBold.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "THICCCBOI-Medium";
   src: url("./fonts/THICCCBOI-Medium.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "THICCCBOI-Regular";
   src: url("./fonts/THICCCBOI-Regular.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "THICCCBOI-SemiBold";
   src: url("./fonts/THICCCBOI-SemiBold.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "THICCCBOI-ThicccAF";
   src: url("./fonts/THICCCBOI-ThicccAF.ttf") format("truetype");
@@ -95,4 +101,118 @@ span {
   color: #FFFFFF;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+/* custom styles */
+
+
+h1 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 800;
+  font-family: var(--app-primary-font-bold);
+  color: var(--app-black-500);
+}
+
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 800;
+  font-family: var(--app-primary-font-bold);
+  color: var(--app-blue-600);
+}
+
+h6 {
+  /*font-size: 1.25rem;*/
+  line-height: 1.5rem;
+  font-weight: 800;
+  font-family: var(--app-primary-font-bold);
+  color: var(--app-black-500);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+span {
+  color: var(--app-grey-200);
+}
+
+
+h5 {
+  font-family: var(--app-primary-font-bold);
+  font-weight: 800;
+  color: var(--app-gray-200);
+}
+
+/* .reference a {
+  color: var(--app-black-500);
+}
+
+ .reference a:first-child,  .reference a:first-child * {
+  font-family: var(--app-primary-font-bold);
+  font-weight: 800;
+  color: var(--app-blue-600);
+} */
+
+hr {
+  background: var(--app-gray-200);
+  border: var(--app-gray-200);
+  height: 1px;
+  border: none;
+}
+
+image {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.highlight-text {
+  border-left: 7px solid var(--app-blue-600);
+  border-radius: 3px;
+  background: var(--app-blue-200);
+}
+
+@media all and (min-width: 768px) {
+
+  h1,
+  h2 {
+    font-size: 1.35rem;
+    line-height: 1.5rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media all and (min-width: 992px) {
+
+  h1,
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 2rem;
+  }
+}
+
+@media all and (min-width: 1024px) {
+
+  h1,
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+  }
+
+  p {
+    font-size: 1.15rem;
+    line-height: 2.2rem;
+  }
 }

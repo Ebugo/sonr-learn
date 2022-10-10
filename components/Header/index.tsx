@@ -33,7 +33,14 @@ const Header = () => {
 	];
 
 	const programNavItems = [
-		{title: "Certification", url: "/programs"},
+		{title: (
+			<span className="text-grey-100 flex items-center">
+				<span className="mr-2">Certification</span>
+				<small className="coming-soon whitespace-nowrap">Coming soon</small>
+			</span>
+			),
+			url: "#"
+		},
 		{title: "Hackathons", url: "/#upcoming-events"},
 		{title: "Events", url: "/#upcoming-events"},
 		{title: (

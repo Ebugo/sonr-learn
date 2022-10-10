@@ -8,3 +8,4 @@ export * from "./EventCard";
 export * from "./Tag";
 export * from "./TechCard";
 export * from "./ProgramCard";
+export * from "./CopyToClipboard";

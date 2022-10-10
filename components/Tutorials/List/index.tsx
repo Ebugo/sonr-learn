@@ -9,6 +9,26 @@ import { UpcomingEvents } from "../../UpcomingEvents";
 import { SuggestedTutorials } from "../../SuggestedTutorials";
 import { Lesson, LessonProps, LessonTrackMap } from "../../../types";
 
+
+// Handler functions
+export const getAuthors = (author: string[] | string): string => {
+	let authors = "";
+
+	if (Array.isArray(author)) {
+		authors = author.reduce((a, b) => a + ", " + b);
+	} else {
+		authors = author;
+	}
+
+	return authors;
+};
+
+export const getAuthorInitials = (author: string[] | string) => {
+	const authors = getAuthors(author);
+	return authors && typeof authors === "string" ? authors.split(",").map(a => a[0]).join("") : "";
+};
+
+
 const TutorialsList: React.FC<LessonProps> = ({ lessons }) => {
 	const { push } = useRouter();
 	const latestTutorial: Lesson = lessons[0];
@@ -51,13 +71,13 @@ const TutorialsList: React.FC<LessonProps> = ({ lessons }) => {
 							<span className={`mt-5 ${styles["sub-text"]}`}>5mins Read</span>
 							<div className={`${styles["description"]} mt-auto flex items-center`}>
 								<span className="flex items-center">
-									<span className={`${styles["avatar"]} mr-3`}>IP</span>
-									Ian Perez
+									<span className={`${styles["avatar"]} mr-3`}>{getAuthorInitials(latestTutorial?.frontMatter?.author)}</span>
+									{getAuthors(latestTutorial?.frontMatter?.author)}
 								</span>
 								<span className="ml-auto">28th June, 2022</span>
 							</div>
 						</div>
-						<div className="flex flex-col items-center justify-center ml-auto">
+						<div onClick={()=>push('/tutorials/'+latestTutorial?.slug)} className="flex flex-col items-center justify-center ml-auto cursor-pointer">
 							<span className={styles["arrow-container"]}>
 								<ArrowCircleRight />
 							</span>

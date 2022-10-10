@@ -11,7 +11,7 @@
 }
 
 .bigNav .dropdown .dropdown-content {
-  width: 213px;
+  width: 233px;
   background: #FFFFFF;
   box-shadow: 0px 4px 12px -4px rgba(22, 34, 51, 0.12), 0px 16px 32px rgba(22, 34, 51, 0.16);
   border-radius: 5px;
@@ -38,8 +38,11 @@
   color: #0D6ECC !important;
 }
 
+.bigNav .dropdown.programs-dropdown .dropdown-content .dropdown-item:hover:first-child,
+.bigNav .dropdown.programs-dropdown .dropdown-content .dropdown-item:active:first-child,
 .bigNav .dropdown.programs-dropdown .dropdown-content .dropdown-item:hover:last-child,
-.bigNav .dropdown.programs-dropdown .dropdown-content .dropdown-item:active:last-child{
+.bigNav .dropdown.programs-dropdown .dropdown-content .dropdown-item:active:last-child
+{
   background: none !important;
   color: initial !important;
 }
