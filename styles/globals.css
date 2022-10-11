@@ -2,26 +2,32 @@
   font-family: "THICCCBOI-Black";
   src: url("./fonts/THICCCBOI-Black.ttf");
 }
+
 @font-face {
   font-family: "THICCCBOI-Bold";
   src: url("./fonts/THICCCBOI-Bold.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "THICCCBOI-ExtraBold";
   src: url("./fonts/THICCCBOI-ExtraBold.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "THICCCBOI-Medium";
   src: url("./fonts/THICCCBOI-Medium.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "THICCCBOI-Regular";
   src: url("./fonts/THICCCBOI-Regular.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "THICCCBOI-SemiBold";
   src: url("./fonts/THICCCBOI-SemiBold.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "THICCCBOI-ThicccAF";
   src: url("./fonts/THICCCBOI-ThicccAF.ttf") format("truetype");

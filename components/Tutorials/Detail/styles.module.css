@@ -48,8 +48,8 @@
   justify-content: center;
 }
 
-.container .description span:first-child {
-  border-right: 1px solid var(--app-gray-200);
+.container .description span:nth-child(2) {
+  border-left: 1px solid var(--app-gray-200);
 }
 
 .container .reference {

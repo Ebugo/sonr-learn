@@ -14,6 +14,7 @@ import { getLessonData } from '../../helpers/getLessonData';
 
 
 const TutorialDetail: NextPage<LessonDetailProps> = ({ mdxSource, slug }) => {
+	console.log({mdxSource})
 	return (
 		<AppLayout>
 			<div className="container md:px-16 lg:px-28">
@@ -41,6 +42,5 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params: { slug } }: any) => {
 	const lesson = 'tutorials';
 	const mdxSource = await getLessonData(lesson, slug);
-	// console.log({ mdxSource, lesson, slug })
 	return { props: { mdxSource: mdxSource, lesson, slug } }
 }

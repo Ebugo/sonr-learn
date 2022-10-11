@@ -26,7 +26,7 @@ const ProgramCard: React.FC<Props> = ({ title, header, desc, image, id, date, sl
 
     return (
         <section className={styles["container"]}>
-          <h3 className="py-8">{title}</h3>
+          <h3 className="py-8">Beginner Sonr Development course</h3>
           <div className={`${styles["program-body"]} flex flex-col md:flex-row`}>
             <div>
             {/* <Image src={image[0] || Program1} width={582} height={470} /> */}
@@ -38,7 +38,7 @@ const ProgramCard: React.FC<Props> = ({ title, header, desc, image, id, date, sl
                   <Tag text="Blockchain" color="secondary" />
                   <Tag text="Project-based learning" color="tertiary" />
                 </div>
-                <h3>{header}</h3>
+                <h3>{title}</h3>
                 <span className={`mt-5 ${styles["sub-text"]}`}>{desc}</span>
                 <div className="py-10">
                   <Button

@@ -1,70 +1,134 @@
 {/* eslint-disable @next/next/no-html-link-for-pages */ }
 
 import styles from './styles.module.css';
-import { Image } from "../../Shared";
+// import { Image } from "../../Shared";
 import { CodeBlock, LinkIcon, Rating, TutorialAccess } from "../../../assets";
 import React from "react";
 import { Tag } from "../../Shared/Tag";
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
+import { Code, Box, Heading, Image, Text } from '@chakra-ui/react'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import dracula from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula'
+import { CopyToClipboard } from '../../Shared';
+import { getAuthorInitials, getAuthors } from '../List';
 
+
+// const components: any = {
+// 	// code: (props: any) => {
+// 	// 	const [, language] =
+// 	// 		(props.className as string)?.match(/language-(\w+)/) ?? []
+
+// 	// 	if (language) {
+// 	// 		return (
+// 	// 			<Box position="relative">
+// 	// 				<SyntaxHighlighter language={language} {...props} style={dracula} />
+// 	// 				<CopyToClipboard {...props} />
+// 	// 			</Box>
+// 	// 		)
+// 	// 	}
+
+// 	// 	return <Code fontSize="md" wordBreak="break-all" {...props} />
+// 	// },
+// 	h1: (props: any) => (
+// 		<h1 className="pb-4" {...props} />
+// 		// <Heading as="h1" apply="mdx.h1" fontSize="4xl" {...props} />
+// 	),
+// 	h2: (props: any) => (
+// 		<h2 {...props} />
+// 		// <Heading as="h2" apply="mdx.h2" fontSize="3xl" {...props} />
+// 	),
+// 	h3: (props: any) => (
+// 		<h3 {...props} />
+// 		// <Heading as="h3" apply="mdx.h3" fontSize="2xl" {...props} />
+// 	),
+// 	h4: (props: any) => (
+// 		<h4 {...props} />
+// 		// <Heading as="h4" apply="mdx.h4" fontSize="xl" {...props} />
+// 	),
+// 	p: (props: any) => (
+// 		<p {...props} />
+// 		// <Text as="p" apply="mdx.p" fontSize="xl" {...props} />
+// 	),
+// 	a: (props: any) =>  (
+// 		<a {...props} />
+// 		// <Text as="a" apply="mdx.a" {...props} />
+// 	),
+// 	ul: (props: any) =>  (
+// 		<ul {...props} />
+// 		// <Text as="ul" apply="mdx.ul" fontSize="xl" {...props} />
+// 	),
+// 	// img: (props: any) => (
+// 	// 	<Image as="img" apply="mdx.image" m="0 auto" alt="" {...props} />
+// 	// ),
+// 	// ContentSideDrawer,
+// 	// ContentCallout,
+// }
 
 const components: any = {
-	// code: (props: any) => {
-	// 	const [, language] =
-	// 		(props.className as string)?.match(/language-(\w+)/) ?? []
+	code: (props: any) => {
+		const [, language] =
+			(props.className as string)?.match(/language-(\w+)/) ?? []
 
-	// 	if (language) {
-	// 		return (
-	// 			<Box position="relative">
-	// 				<SyntaxHighlighter language={language} {...props} style={dracula} />
-	// 				<CopyToClipboard {...props} />
-	// 			</Box>
-	// 		)
-	// 	}
+		if (language) {
+			return (
+				<Box position="relative">
+					<SyntaxHighlighter language={language} {...props} style={dracula} />
+					<CopyToClipboard {...props} />
+				</Box>
+			)
+		}
 
-	// 	return <Code fontSize="md" wordBreak="break-all" {...props} />
-	// },
+		return <Code fontSize="md" wordBreak="break-all" {...props} />
+	},
 	h1: (props: any) => (
-		<h1 className="pb-4" {...props} />
-		// <Heading as="h1" apply="mdx.h1" fontSize="4xl" {...props} />
+		<Heading as="h1" apply="mdx.h1" fontSize="4xl" {...props} />
 	),
 	h2: (props: any) => (
-		<h2 {...props} />
-		// <Heading as="h2" apply="mdx.h2" fontSize="3xl" {...props} />
+		<Heading as="h2" apply="mdx.h2" fontSize="3xl" {...props} />
 	),
 	h3: (props: any) => (
-		<h3 {...props} />
-		// <Heading as="h3" apply="mdx.h3" fontSize="2xl" {...props} />
+		<Heading as="h3" apply="mdx.h3" fontSize="2xl" {...props} />
 	),
 	h4: (props: any) => (
-		<h4 {...props} />
-		// <Heading as="h4" apply="mdx.h4" fontSize="xl" {...props} />
+		<Heading as="h4" apply="mdx.h4" fontSize="xl" {...props} />
 	),
-	p: (props: any) => (
-		<p {...props} />
-		// <Text as="p" apply="mdx.p" fontSize="xl" {...props} />
+	p: (props: any) => <Text as="p" apply="mdx.p" fontSize="xl" {...props} />,
+	a: (props: any) => <Text as="a" apply="mdx.a" {...props} />,
+	ul: (props: any) => <Text as="ul" apply="mdx.ul" fontSize="xl" {...props} />,
+	img: (props: any) => (
+		<Image as="img" apply="mdx.image" m="0 auto" alt="" {...props} />
 	),
-	a: (props: any) =>  (
-		<a {...props} />
-		// <Text as="a" apply="mdx.a" {...props} />
-	),
-	ul: (props: any) =>  (
-		<ul {...props} />
-		// <Text as="ul" apply="mdx.ul" fontSize="xl" {...props} />
-	),
-	// img: (props: any) => (
-	// 	<Image as="img" apply="mdx.image" m="0 auto" alt="" {...props} />
-	// ),
 	// ContentSideDrawer,
 	// ContentCallout,
 }
 
 
-const TutorialsDetail: React.FC<{ mdxSource: MDXRemoteSerializeResult }> = ({ mdxSource }) => {
+const TutorialsDetail: React.FC<{ mdxSource: MDXRemoteSerializeResult | any }> = ({ mdxSource }) => {
+	console.log({ mdxSource })
+	const colors = ["primary", "secondary", "tertiary", "green"];
+
 	return (
 		<div className={`${styles["container"]} flex flex-col md:flex-row`}>
 			<section className="pt-14 md:pt-4 md:order-1 order-2">
-				<MDXRemote {...mdxSource} components={components} />
+				{Array.isArray(mdxSource?.scope?.tags) && mdxSource?.scope?.tags.length > 0 && (
+					<div className="flex flex-wrap gap-3 w-full mb-2">
+						{mdxSource?.scope?.tags?.map((tag: string, i: number) => (
+							<Tag key={i} text={tag} color={colors[Math.floor(Math.random() * 3)]} />
+						))}
+					</div>
+				)}
+				<h1 className="pb-4">{mdxSource?.scope?.title || "- -"}</h1>
+				<span className={`${styles["sub-text"]}`}>5mins Read</span>
+				<div className={`${styles["description"]} mt-6 mb-3 flex items-center`}>
+					<span className="flex items-center">
+						<span className={`${styles["avatar"]} mr-3`}>{getAuthorInitials(mdxSource?.scope?.author)}</span>
+						{getAuthors(mdxSource?.scope?.author)}
+					</span>
+					{mdxSource?.scope?.date && <span className="ml-5 pl-5">{mdxSource?.scope?.date || ''}</span>}
+				</div>
+				<div className="">
+					<MDXRemote {...mdxSource} components={components} />
+				</div>
 
 
 				{/* <div className="flex flex-wrap gap-3 w-full mb-2">
@@ -91,8 +155,8 @@ const TutorialsDetail: React.FC<{ mdxSource: MDXRemoteSerializeResult }> = ({ md
 					<p>We think authentication should be simple, yet secure. The Sonr network uses Webauthn a key-based authentication system utilizing credential systems found on the user operating system to perform key exchanges with our Highway Nodes which then grants you access to the network. The following is a diagram outlining our authentication and registration flows.</p>
 					<p>Currently, our implementations of Webauthn use the &lsquo;platform-specific&rsquo; credential options meaning our servers will request your operating system to use whichever authentication method is most native to it. For information on what authentication mechanisims are supported</p> */}
 
-					{/* Code block	*/}
-					{/* <div className={styles["image-container"]}>
+				{/* Code block	*/}
+				{/* <div className={styles["image-container"]}>
 						<Image src={CodeBlock} width={954} height={1020} />
 					</div>
 
@@ -105,8 +169,8 @@ const TutorialsDetail: React.FC<{ mdxSource: MDXRemoteSerializeResult }> = ({ md
 						When a user registers their domain will be prompted to supply your user credentials for relating to our generated DID which is then paired with provided PublicKeyCredentials
 					</div> */}
 
-					{/* Code block	*/}
-					{/* <div className={styles["image-container"]}>
+				{/* Code block	*/}
+				{/* <div className={styles["image-container"]}>
 						<Image src={CodeBlock} width={954} height={1020} />
 					</div>
 
@@ -114,8 +178,8 @@ const TutorialsDetail: React.FC<{ mdxSource: MDXRemoteSerializeResult }> = ({ md
 					<p>You can go ahead and verify your project contract address. Your local testnet should be running on 0001:0.0019200.</p>
 					<p>Hope you found this tutorial valuable? Drop a rating of a scale of 1 - 10 on how likely you are to recommend our learning resources to your colleagues and pals. Continue Learning <LinkIcon href="#">here</LinkIcon>.</p> */}
 
-					{/*	Ratings*/}
-					{/* <div className="my-10">
+				{/*	Ratings*/}
+				{/* <div className="my-10">
 						<Image src={Rating} width={672} height={68} />
 					</div> */}
 
