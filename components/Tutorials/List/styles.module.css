@@ -62,8 +62,9 @@
   background: var(--app-white);
 }
 
-.container .latest-tutorial > div:first-child span {
+.container .latest-tutorial .thumbnail span {
   height: 100% !important;
+  width: 100% !important;
   border-radius: 15px;
 }
 
@@ -148,11 +149,11 @@
     font-size: 16px;
   }
 
-  .container .latest-tutorial > div:first-child {
+  .container .latest-tutorial .thumbnail {
     width: 45.9%;
   }
 
-  .container .latest-tutorial > div:first-child span {
+  .container .latest-tutorial .thumbnail span {
     height: 100% !important;
     border-radius: 15px 0 0 15px;
   }

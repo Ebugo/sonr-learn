@@ -5,7 +5,6 @@ import styles from './styles.module.css';
 import {Button, ProgramCard} from "../../";
 import {BannerIcon, Star} from "../../../assets";
 import {UpcomingEvents} from "../../UpcomingEvents";
-import {programs} from "../../../__mock__/programs";
 import { LessonProps } from "../../../types";
 
 const ProgramsList: React.FC<LessonProps> = ({ lessons }) => {
@@ -33,9 +32,9 @@ const ProgramsList: React.FC<LessonProps> = ({ lessons }) => {
 			</section>
 
 			<section id="start" className="py-5 md:py-12">
-				{lessons.map(({ frontMatter: { title, author, duration, icons, tags, date }, path, slug }, i: number) => (
+				{lessons.map(({ frontMatter: { title, authors, duration, icons, thumb, tags, date }, path, slug }, i: number) => (
 					<div key={i}>
-						<ProgramCard title={title} header={"header"} id={i} image={icons} desc={"desc"} tags={tags} slug={slug} date={date} />
+						<ProgramCard title={title} header={"header"} id={i} image={thumb} desc={"desc"} tags={tags} slug={slug} date={date} />
 						<hr className={`${lessons && i!== lessons.length-1 ? "block" : "hidden"} mt-14 mb-5 bg-grey-100`} />
 					</div>
 				))}

@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import styles from './index.module.css';
-import { AppLayout, Button, Image, Input, Tag, TechCard } from "../components";
+import { AppLayout, Button, Image, Input, SampleTechs, Tag } from "../components";
 import {
 	ArrowCircleRight, ArrowRight,
 	Award,
@@ -12,11 +12,10 @@ import {
 	Identity, Learn,
 	P2p,
 	Screenshot,
-	Screenshot2, Star,
+	Screenshot2,
 	Zkp
 } from "../assets";
-import { tutorials, events } from "../__mock__";
-import React, { createRef, Ref, useEffect, useState } from "react";
+import React, { createRef, Ref } from "react";
 import { useRouter } from "next/router";
 import { UpcomingEvents } from "../components/UpcomingEvents";
 import { SuggestedTutorials } from "../components/SuggestedTutorials";
@@ -38,60 +37,40 @@ const flickityOptions = {
 	adaptiveHeight: true
 };
 
+export const technologies = [
+	{
+		title: "Peer-to-Peer technology",
+		icon: <P2p />,
+		desc: "Learn about the tool of the art of, \n" +
+			"This is a junk content and will be replaced",
+		image: Screenshot
+	},
+	{
+		title: "Decentralized Identity",
+		icon: <Identity />,
+		desc: "Learn about the tool of the art of, \n" +
+			"This is a junk content and will be replaced",
+		image: Screenshot2
+	},
+	{
+		title: "Zero-knowledge proof",
+		icon: <Zkp />,
+		desc: "Learn about the tool of the art of, \n" +
+			"This is a junk content and will be replaced",
+		image: Screenshot
+	},
+]
+
 
 const Home: NextPage<LessonProps> = ({ lessons }) => {
-	//state management
-	const [activeTechCard, setActiveTechCard] = useState(0);
-
 	const { push } = useRouter();
-
-	let toggle: any = null;
 
 	const flickityRef: Ref<any> = createRef();
 
 	//constants
 	const Flickity: any = FlickityComponent;
 
-	const technologies = [
-		{
-			title: "Peer-to-Peer technology",
-			icon: <P2p />,
-			desc: "Learn about the tool of the art of, \n" +
-				"This is a junk content and will be replaced",
-			image: Screenshot
-		},
-		{
-			title: "Decentralized Identity",
-			icon: <Identity />,
-			desc: "Learn about the tool of the art of, \n" +
-				"This is a junk content and will be replaced",
-			image: Screenshot2
-		},
-		{
-			title: "Zero-knowledge proof",
-			icon: <Zkp />,
-			desc: "Learn about the tool of the art of, \n" +
-				"This is a junk content and will be replaced",
-			image: Screenshot
-		},
-	]
-
 	//Handler
-	function handleTechsToggle() {
-		// clearInterval(toggle);
-		let nextCard = activeTechCard + 1;
-		if (nextCard > technologies.length - 1) {
-			nextCard = 0;
-		}
-		toggle = setTimeout(() => setActiveTechCard(nextCard), 2000)
-			;
-	}
-
-	const handleToggle = (cardIndex: number) => {
-		setActiveTechCard(cardIndex);
-		clearTimeout(toggle);
-	}
-
 	const handleNext = () => {
 		flickityRef.current.flkty.next();
 	};
@@ -101,15 +80,6 @@ const Home: NextPage<LessonProps> = ({ lessons }) => {
 	};
 
 
-	useEffect(() => {
-		handleTechsToggle();
-	}, [activeTechCard])
-
-
-	// @ts-ignore
-	// @ts-ignore
-	// @ts-ignore
-	// @ts-ignore
 	// @ts-ignore
 	return (
 		<AppLayout>
@@ -158,47 +128,7 @@ const Home: NextPage<LessonProps> = ({ lessons }) => {
 					</div>
 				</section>
 
-				<section className="my-10 md:my-20 py-10 md:py-20 md:pb-5 bg-blue-100">
-					<div className={`${styles["tutorials-sample-container"]} container pb-12`}>
-						<div className={`${styles["tutorials-sample"]} container pl-0 pr-0 flex flex-col xl:flex-row`}>
-							<div>
-								<h3 className="mb-10">Learn about the different tools and technologies in the Sonr Ecosystem</h3>
-
-								<div className={`${styles["tutorials-sample-control"]} flex flex-wrap xl:flex-col mb-10 xl:mb-0`}>
-									{technologies.map(({ title, desc, icon }, i) => (
-										<TechCard
-											id={i}
-											key={i}
-											title={title}
-											desc={desc}
-											icon={icon}
-											activeTechCard={activeTechCard}
-											handleClick={handleToggle}
-										/>
-									))}
-								</div>
-							</div>
-							<div className="hidden md:block">
-								<Image
-									height={651}
-									width={978}
-									src={technologies[activeTechCard]?.image || Screenshot}
-									alt="tutorials"
-									className={""}
-									priority={true}
-								/>
-							</div>
-						</div>
-					</div>
-					<div className="pb-12">
-						<Button
-							className="px-5 mx-auto"
-							onClick={() => push("#")}
-						>
-							<span>Start tutorials</span>
-						</Button>
-					</div>
-				</section>
+				<SampleTechs />
 
 				<section className={`container my-10 md:my-20 ${styles["programs-container"]}`}>
 					<h3 className="mb-10 text-center">Featured Programs</h3>
@@ -245,6 +175,15 @@ const Home: NextPage<LessonProps> = ({ lessons }) => {
 					header="All things Decentralization, Building in an IBC enabled chain, and the future of the web."
 					lessons={lessons}
 				/>
+
+				<div className="py-12">
+					<Button
+						className="px-10 mx-auto md:mt-8"
+						onClick={() => push("/tutorials")}
+					>
+						<span>Browse all tutorials</span>
+					</Button>
+				</div>
 
 				<section className={`container ${styles["community-container"]}`}>
 					<h3 className="my-8 md:my-10">Participate in our community bounty programs</h3>

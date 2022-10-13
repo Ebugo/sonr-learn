@@ -21,6 +21,14 @@
     color: var(--app-grey-200);
 }
 
+.container .thumbnail {
+    border-radius: 15px 15px 0px 0px;
+}
+
+.container .thumbnail > * {
+    border-radius: 15px 15px 0px 0px;
+}
+
 .container .description * {
     font-size: 14px;
 }
