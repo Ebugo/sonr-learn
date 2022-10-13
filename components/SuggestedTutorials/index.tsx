@@ -13,8 +13,8 @@ const SuggestedTutorials = ({ header, lessons }: { header: string, lessons: Less
 		<section className={`container ${styles["tutorials-container"]}`}>
 			<h3 className="mb-10">{header}</h3>
 			<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-				{lessons.map(({ frontMatter: { title, author, duration, icons, tags, date }, path, slug }, i: number) => (
-					<TutorialCard key={i} title={title} author={author} duration={duration} image={icons} date={date} tags={tags} slug={slug} />
+				{lessons.map(({ frontMatter: { title, authors, duration, icons, tags, date }, path, slug }, i: number) => (
+					<TutorialCard key={i} title={title} authors={authors} duration={duration} image={icons} date={date} tags={tags} slug={slug} />
 				))}
 			</div>
 			<div className="py-12">

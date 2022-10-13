@@ -476,7 +476,7 @@ After our state variables, we can define our new event as:
 
 ```solidity
 // We add this line after our 'message' and 'messageCount' definitions
-event web3Future(uint256 indexed messageIndex, address indexed author, string message, string future);
+event web3Future(uint256 indexed messageIndex, address indexed authors, string message, string future);
 ```
 
 Notice that our second parameter is defined with a new type: `address`. We use
@@ -608,7 +608,7 @@ Compiler sidebar icon.
         uint256 messageCount;
     
         // Events
-        event Web3Future(uint256 indexed messageIndex, address indexed author, string message, string future);
+        event Web3Future(uint256 indexed messageIndex, address indexed authors, string message, string future);
     
         // Functions
         function getMessage() public view returns(string memory) {
