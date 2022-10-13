@@ -28,7 +28,7 @@ const TutorialCard: React.FC<Props> = ({ title, authors, duration, image, tags, 
       onClick={() => push(`/tutorials/${slug}`)}
     >
       <div className={styles["thumbnail"]}>
-        <Image src={image || '/favicon.ico'} width={397} height={282.53} />
+        <Image alt="thumbnail" src={image || '/assets/lessons/thumbnail.png'} width={397} height={282.53} />
       </div>
       <div className="flex-grow flex flex-col p-5 xl:px-8 md:py-6">
         {Array.isArray(tags) && tags.length > 0 && (

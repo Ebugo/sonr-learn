@@ -58,7 +58,7 @@ const TutorialsList: React.FC<LessonProps> = ({ lessons }) => {
 				<h3 className="py-8">Latest Tutorial</h3>
 				<div className={`${styles["latest-tutorial"]} flex flex-col md:flex-row`}>
 					<div className={styles["thumbnail"]}>
-						<Image src={latestTutorial?.frontMatter?.thumb || '/favicon.ico'} width={555} height={417} />
+						<Image alt="thumbnail" src={latestTutorial?.frontMatter?.thumb || '/assets/lessons/thumbnail.png'} width={555} height={417} />
 					</div>
 					<div className="flex-grow flex flex-col md:flex-row p-5 xl:p-16">
 						<div className="xl:pr-16 md:w-3/4 flex flex-col">
