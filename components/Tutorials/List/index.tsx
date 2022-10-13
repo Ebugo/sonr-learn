@@ -3,8 +3,7 @@ import { useRouter } from "next/router";
 import Head from 'next/head';
 import styles from './styles.module.css';
 import { Button, Image, TutorialCard, EventCard, Tag } from "../../";
-import { ArrowCircleRight, BannerIcon, Consensus, Star } from "../../../assets";
-import { tutorials, events } from "../../../__mock__";
+import { ArrowCircleRight, BannerIcon, Star } from "../../../assets";
 import { UpcomingEvents } from "../../UpcomingEvents";
 import { SuggestedTutorials } from "../../SuggestedTutorials";
 import { Lesson, LessonProps, LessonTrackMap } from "../../../types";
@@ -58,8 +57,8 @@ const TutorialsList: React.FC<LessonProps> = ({ lessons }) => {
 			<section className="">
 				<h3 className="py-8">Latest Tutorial</h3>
 				<div className={`${styles["latest-tutorial"]} flex flex-col md:flex-row`}>
-					<div>
-						<Image src={Consensus} width={555} height={417} />
+					<div className={styles["thumbnail"]}>
+						<Image src={latestTutorial?.frontMatter?.thumb || '/favicon.ico'} width={555} height={417} />
 					</div>
 					<div className="flex-grow flex flex-col md:flex-row p-5 xl:p-16">
 						<div className="xl:pr-16 md:w-3/4 flex flex-col">
