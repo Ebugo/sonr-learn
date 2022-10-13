@@ -96,6 +96,8 @@ const TutorialsList: React.FC<LessonProps> = ({ lessons }) => {
 				lessons={lessons}
 			/>
 
+			<div className="py-6"></div>
+
 			<UpcomingEvents />
 		</div >
 	);

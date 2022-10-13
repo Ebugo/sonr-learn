@@ -1,0 +1,110 @@
+
+.tutorials-sample-container {
+    /*overflow-x: hidden;*/
+  }
+  
+  .tutorials-sample > div:nth-child(2) {
+    border-radius: 15px;
+  }
+  
+  .tutorials-sample > div:nth-child(2) * {
+    box-shadow: 0px 4px 8px -4px rgba(22, 34, 51, 0.12), 0px 16px 20px rgba(22, 34, 51, 0.08);
+    border-radius: 15px;
+  }
+  
+  .community-container .community-container-scroll {
+    border-radius: 10px;
+  }
+  
+  .community-container .image-container {
+    min-width: 408px;
+    width: 408px;
+    height: 290px;
+  }
+  
+  .community-container .arrow-container {
+    background: var(--app-blue-700);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 12px -4px rgba(22, 34, 51, 0.12);
+    filter: drop-shadow(0px 16px 32px rgba(22, 34, 51, 0.16));
+    cursor: pointer;
+  }
+  
+  .community-container .arrow-container:first-child {
+    transform: rotate(180deg);
+  }
+  
+  @media all and (min-width: 768px) {
+    .tutorials-sample-container h3 {
+      font-size: 1.35rem;
+      line-height: 1.5rem;
+    }
+  
+    .banner {
+    }
+  
+    .banner > div {
+      width: 50%;
+    }
+  
+    .banner button {
+      font-size: 16px;
+      transform: none;
+    }
+  
+    .programs-container > div > div:last-child > svg:first-child {
+      position: absolute;
+      right: 150px;
+      top: -80px;
+    }
+  
+    .programs-container > div > div:last-child > svg:nth-child(2) {
+      position: absolute;
+      right: 78px;
+      top: 24px;
+    }
+  
+    .subscribe form .subscribe-input {
+      width: 62.34%;
+    }
+  
+    .subscribe form > div, .subscribe form > button {
+      width: fit-content;
+    }
+  
+    .tutorials-sample {
+      margin-right: -115px;
+    }
+  
+    .tutorials-sample > div:first-child h3 {
+      width: 80%;
+    }
+  }
+  
+  @media all and (min-width: 992px) {
+    .tutorials-sample-container h3 {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+  }
+  
+  @media all and (min-width: 1024px) {
+    .tutorials-sample-container h3 {
+      font-size: 1.75rem;
+      line-height: 1.75rem;
+    }
+  
+  }
+  
+  
+  @media all and (min-width: 1280px){
+    .tutorials-sample > div:first-child {
+      width: 41.11%;
+    }
+  }
+  
