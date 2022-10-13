@@ -10,7 +10,7 @@ import { getAuthorInitials, getAuthors } from "../../Tutorials";
 
 interface Props {
   title: string;
-  author: string;
+  authors: string;
   duration: string;
   image: any;
   date: string;
@@ -18,8 +18,9 @@ interface Props {
   tags: string[];
 }
 
-const TutorialCard: React.FC<Props> = ({ title, author, duration, image, tags, date, slug }) => {
+const TutorialCard: React.FC<Props> = ({ title, authors, duration, image, tags, date, slug }) => {
   const { push } = useRouter();
+  const colors = ["primary", "secondary", "tertiary", "green"];
 
 
   return (
@@ -31,19 +32,21 @@ const TutorialCard: React.FC<Props> = ({ title, author, duration, image, tags, d
         <Image src={image[0] || Tutorial1} width={397} height={282.53} />
       </div>
       <div className="flex-grow flex flex-col p-5 lg:px-8 xl:px-10 md:py-6">
-        <div className="flex flex-wrap gap-3 w-full mb-2">
-          <Tag text="Consensus Mechanism" color="primary" />
-          <Tag text="Blockchain" color="secondary" />
-          <Tag text="Tutorial" color="tertiary" />
-        </div>
+        {Array.isArray(tags) && tags.length > 0 && (
+          <div className="flex flex-wrap gap-3 w-full mb-2">
+            {tags?.map((tag: string, i: number) => (
+              <Tag key={i} text={tag} color={colors[Math.floor(Math.random() * 3)]} />
+            ))}
+          </div>
+        )}
         <h4>{title}</h4>
         <span className="mt-5">{duration || "5 mins"} Read</span>
         <div className={`${styles["description"]} mt-auto flex items-center`}>
           <span className="flex items-center">
             <span className={`${styles["avatar"]} mr-3`}>
-              {getAuthorInitials(author)}
+              {getAuthorInitials(authors)}
             </span>
-            {getAuthors(author)}
+            {getAuthors(authors)}
           </span>
           <span className="ml-auto">{date}</span>
         </div>

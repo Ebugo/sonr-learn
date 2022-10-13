@@ -11,27 +11,28 @@ import { Lesson, LessonProps, LessonTrackMap } from "../../../types";
 
 
 // Handler functions
-export const getAuthors = (author: string[] | string): string => {
-	let authors = "";
+export const getAuthors = (authors: string[] | string): string => {
+	let authorsList = "";
 
-	if (Array.isArray(author)) {
-		authors = author.reduce((a, b) => a + ", " + b);
+	if (Array.isArray(authors)) {
+		authorsList = authors.reduce((a, b) => a + ", " + b);
 	} else {
-		authors = author;
+		authorsList = authors;
 	}
 
-	return authors;
+	return authorsList;
 };
 
-export const getAuthorInitials = (author: string[] | string) => {
-	const authors = getAuthors(author);
-	return authors && typeof authors === "string" ? authors.split(",").map(a => a[0]).join("") : "";
+export const getAuthorInitials = (authors: string[] | string) => {
+	const authorsList = getAuthors(authors);
+	return authorsList && typeof authorsList === "string" ? authorsList.split(",").map(a => a[0]).join("") : "";
 };
 
 
 const TutorialsList: React.FC<LessonProps> = ({ lessons }) => {
 	const { push } = useRouter();
 	const latestTutorial: Lesson = lessons[0];
+	const colors = ["primary", "secondary", "tertiary", "green"];
 
 
 	return (
@@ -62,22 +63,25 @@ const TutorialsList: React.FC<LessonProps> = ({ lessons }) => {
 					</div>
 					<div className="flex-grow flex flex-col md:flex-row p-5 xl:p-16">
 						<div className="xl:pr-16 md:w-3/4 flex flex-col">
-							<div className="flex flex-wrap gap-3 w-full mb-2">
-								<Tag text="Consensus Mechanism" color="primary" />
-								<Tag text="Blockchain" color="secondary" />
-								<Tag text="Tutorial" color="tertiary" />
-							</div>
+							{Array.isArray(latestTutorial?.frontMatter?.tags) && latestTutorial?.frontMatter?.tags.length > 0 && (
+								<div className="flex flex-wrap gap-3 w-full mb-2">
+									{latestTutorial?.frontMatter?.tags?.map((tag: string, i: number) => (
+										<Tag key={i} text={tag} color={colors[Math.floor(Math.random() * 3)]} />
+									))}
+								</div>
+							)}
+
 							<h3>{latestTutorial?.frontMatter?.title}</h3>
 							<span className={`mt-5 ${styles["sub-text"]}`}>5mins Read</span>
 							<div className={`${styles["description"]} mt-auto flex items-center`}>
 								<span className="flex items-center">
-									<span className={`${styles["avatar"]} mr-3`}>{getAuthorInitials(latestTutorial?.frontMatter?.author)}</span>
-									{getAuthors(latestTutorial?.frontMatter?.author)}
+									<span className={`${styles["avatar"]} mr-3`}>{getAuthorInitials(latestTutorial?.frontMatter?.authors)}</span>
+									{getAuthors(latestTutorial?.frontMatter?.authors)}
 								</span>
-								<span className="ml-auto">28th June, 2022</span>
+								{latestTutorial?.frontMatter?.date && <span className="ml-auto">{latestTutorial?.frontMatter?.date || ''}</span>}
 							</div>
 						</div>
-						<div onClick={()=>push('/tutorials/'+latestTutorial?.slug)} className="flex flex-col items-center justify-center ml-auto cursor-pointer">
+						<div onClick={() => push('/tutorials/' + latestTutorial?.slug)} className="flex flex-col items-center justify-center ml-auto cursor-pointer">
 							<span className={styles["arrow-container"]}>
 								<ArrowCircleRight />
 							</span>

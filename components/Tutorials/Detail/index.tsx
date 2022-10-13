@@ -104,8 +104,30 @@ const components: any = {
 
 
 const TutorialsDetail: React.FC<{ mdxSource: MDXRemoteSerializeResult | any }> = ({ mdxSource }) => {
-	console.log({ mdxSource })
+	// console.log({ mdxSource })
 	const colors = ["primary", "secondary", "tertiary", "green"];
+
+	const anchors = React.Children.toArray(mdxSource?.compiledSource)
+		.filter(
+			(child: any) => {
+// console.log({ child })
+				return child.props?.mdxType && ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(child.props.mdxType)
+			}
+		)
+		.map((child: any) => {
+			// console.log({ child })
+
+			return ({
+			   url: '#' + child.props.id,
+			   depth:
+				   (child.props?.mdxType &&
+					   parseInt(child.props.mdxType.replace('h', ''), 0)) ??
+				   0,
+			   text: child.props.children,
+		   })
+		}
+		);
+	// console.log({ anchors })
 
 	return (
 		<div className={`${styles["container"]} flex flex-col md:flex-row`}>
@@ -120,10 +142,13 @@ const TutorialsDetail: React.FC<{ mdxSource: MDXRemoteSerializeResult | any }> =
 				<h1 className="pb-4">{mdxSource?.scope?.title || "- -"}</h1>
 				<span className={`${styles["sub-text"]}`}>5mins Read</span>
 				<div className={`${styles["description"]} mt-6 mb-3 flex items-center`}>
-					<span className="flex items-center">
-						<span className={`${styles["avatar"]} mr-3`}>{getAuthorInitials(mdxSource?.scope?.author)}</span>
-						{getAuthors(mdxSource?.scope?.author)}
-					</span>
+					{Array.isArray(mdxSource?.scope?.authors) && mdxSource?.scope?.authors.length > 0 && (
+						<span className="flex items-center">
+							<span className={`${styles["avatar"]} mr-3`}>{getAuthorInitials(mdxSource?.scope?.authors)}</span>
+							{getAuthors(mdxSource?.scope?.authors)}
+						</span>
+					)
+					}
 					{mdxSource?.scope?.date && <span className="ml-5 pl-5">{mdxSource?.scope?.date || ''}</span>}
 				</div>
 				<div className="">
