@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./styles.module.css";
 import { Image } from "../Image";
 import { useRouter } from "next/router";
@@ -21,6 +21,10 @@ const TutorialCard: React.FC<Props> = ({ title, authors, duration, image, tags, 
   const { push } = useRouter();
   const colors = ["primary", "secondary", "tertiary", "green"];
 
+  useEffect(()=>{
+
+  }, []);
+  
 
   return (
     <div
