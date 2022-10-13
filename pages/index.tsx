@@ -15,7 +15,6 @@ import {
 	Screenshot2, Star,
 	Zkp
 } from "../assets";
-import { tutorials, events } from "../__mock__";
 import React, { createRef, Ref, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { UpcomingEvents } from "../components/UpcomingEvents";

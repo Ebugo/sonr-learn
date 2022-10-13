@@ -3,7 +3,6 @@
 import React from "react";
 import styles from "./styles.module.css";
 import {Image} from "../Image";
-import {ArrowCircleRight, Consensus, Program1} from "../../../assets";
 import {Tag} from "../Tag";
 import {Button} from "../Button";
 import {useRouter} from "next/router";
@@ -29,7 +28,7 @@ const ProgramCard: React.FC<Props> = ({ title, header, desc, image, id, date, sl
           <h3 className="py-8">Beginner Sonr Development course</h3>
           <div className={`${styles["program-body"]} flex flex-col md:flex-row`}>
             <div>
-            {/* <Image src={image[0] || Program1} width={582} height={470} /> */}
+            <Image src={image || '/favicon.ico'} width={582} height={470} />
             </div>
             <div className="flex-grow flex flex-col md:flex-row p-5 xl:p-16">
               <div className="flex flex-col">
