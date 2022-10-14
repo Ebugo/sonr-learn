@@ -144,7 +144,7 @@ const TutorialsDetail: React.FC<{ mdxSource: MDXRemoteSerializeResult | any }> =
 				<div className={`${styles["description"]} mt-6 mb-3 flex items-center`}>
 					{Array.isArray(mdxSource?.scope?.authors) && mdxSource?.scope?.authors.length > 0 && (
 						<span className="flex items-center">
-							<span className={`${styles["avatar"]} mr-3`}>{getAuthorInitials(mdxSource?.scope?.authors)}</span>
+							{/* <span className={`${styles["avatar"]} mr-3`}>{getAuthorInitials(mdxSource?.scope?.authors)}</span> */}
 							{getAuthors(mdxSource?.scope?.authors)}
 						</span>
 					)
