@@ -74,7 +74,7 @@ const TutorialsList: React.FC<LessonProps> = ({ lessons }) => {
 							<span className={`mt-5 ${styles["sub-text"]}`}>5mins Read</span>
 							<div className={`${styles["description"]} mt-auto flex items-center`}>
 								<span className="flex items-center">
-									<span className={`${styles["avatar"]} mr-3`}>{getAuthorInitials(latestTutorial?.frontMatter?.authors)}</span>
+									{/* <span className={`${styles["avatar"]} mr-3`}>{getAuthorInitials(latestTutorial?.frontMatter?.authors)}</span> */}
 									{getAuthors(latestTutorial?.frontMatter?.authors)}
 								</span>
 								{latestTutorial?.frontMatter?.date && <span className="ml-auto">{latestTutorial?.frontMatter?.date || ''}</span>}
