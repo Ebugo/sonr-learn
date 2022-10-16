@@ -24,7 +24,7 @@ const TutorialCard: React.FC<Props> = ({ title, authors, duration, image, tags, 
   useEffect(()=>{
 
   }, []);
-  
+
 
   return (
     <div
@@ -46,9 +46,9 @@ const TutorialCard: React.FC<Props> = ({ title, authors, duration, image, tags, 
         <span className="mt-5">{duration || "5 mins"} Read</span>
         <div className={`${styles["description"]} mt-auto flex flex-wrap items-center gap-2`}>
           <span className="flex items-center mr-auto">
-            <span className={`${styles["avatar"]} mr-1`}>
+            {/* <span className={`${styles["avatar"]} mr-1`}>
               {getAuthorInitials(authors)}
-            </span>
+            </span> */}
             {getAuthors(authors)}
           </span>
           <span className="">{date}</span>
