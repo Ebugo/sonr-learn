@@ -202,13 +202,13 @@ export const theme = extendTheme({
       mt: '0.5rem',
       ml: '1.25rem',
       'blockquote &': { mt: 0 },
+      '& > *': {
+        fontSize: '1rem',
+      },
       '& > * + *': {
         mt: '0.25rem',
       },
-      fontSize: '1rem',
-    },
-    li: {
-      fontSize: '1rem',
+      fontSize: '0.875rem',
     },
     code: {
       bg: 'gray:300',
