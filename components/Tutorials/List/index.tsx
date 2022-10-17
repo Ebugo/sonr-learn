@@ -37,7 +37,7 @@ const TutorialsList: React.FC<LessonProps> = ({ lessons }) => {
 	return (
 		<div className={styles["container"]}>
 			<Head>
-				<title>Sonr Learn | Home</title>
+				<title>Sonr Learn | Tutorials</title>
 			</Head>
 			<section className={`${styles["banner"]} flex relative p-5 md:p-10 xl:p-16 overflow-hidden`}>
 				<div className="md:w-4/6">
