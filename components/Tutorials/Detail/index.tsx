@@ -130,7 +130,7 @@ const TutorialsDetail: React.FC<{ mdxSource: MDXRemoteSerializeResult | any, hea
 										)
 									}
 								})
-								: <a>No reference.</a>
+								: <a className="my-1 ml-8">No reference.</a>
 						}
 					</div>
 				</div>
