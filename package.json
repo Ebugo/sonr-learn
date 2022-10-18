@@ -21,7 +21,8 @@
 		"next-seo": "^5.5.0",
 		"react": "18.0.0",
 		"react-dom": "18.0.0",
-		"react-flickity-component": "^3.6.2"
+		"react-flickity-component": "^3.6.2",
+		"rehype-slug": "^5.0.1"
 	},
 	"devDependencies": {
 		"@svgr/webpack": "^5.5.0",

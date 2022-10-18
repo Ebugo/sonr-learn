@@ -21,7 +21,7 @@ import { UpcomingEvents } from "../components/UpcomingEvents";
 import { SuggestedTutorials } from "../components/SuggestedTutorials";
 import FlickityComponent from 'react-flickity-component';
 import "flickity/css/flickity.css";
-import { getLessons } from '../helpers';
+import { getLessons } from '../utils';
 import { LessonProps } from '../types';
 
 const flickityOptions = {
@@ -68,7 +68,7 @@ const Home: NextPage<LessonProps> = ({ lessons }) => {
 	const flickityRef: Ref<any> = createRef();
 
 	//constants
-	const Flickity: any = FlickityComponent;
+	// const Flickity: any = FlickityComponent;
 
 	//Handler
 	const handleNext = () => {
@@ -188,7 +188,7 @@ const Home: NextPage<LessonProps> = ({ lessons }) => {
 				<section className={`container ${styles["community-container"]}`}>
 					<h3 className="my-8 md:my-10">Participate in our community bounty programs</h3>
 					<div className={`${styles["community-container-scroll"]} gap-10 bg-blue-700 p-5 md:p-10`}>
-						<Flickity
+						<FlickityComponent
 							ref={flickityRef}
 							className={"carousel"} // default ''
 							elementType={"div"} // default 'div'
@@ -214,7 +214,7 @@ const Home: NextPage<LessonProps> = ({ lessons }) => {
 									</div>
 								))
 							}
-						</Flickity>
+						</FlickityComponent>
 					</div>
 					<div className="flex justify-end pt-10">
 						<span className={styles["arrow-container"]} onClick={handlePrevious}>

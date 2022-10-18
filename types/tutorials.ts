@@ -19,6 +19,7 @@ export interface LessonDetailProps {
     frontMatter: object
     mdxSource: MDXRemoteSerializeResult
     slug: string
+    headings: any[]
 }
 
 export type LessonConnection = Record<string, string>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import NextImage, {StaticImageData} from "next/image";
 
 type ComponentProps = {
@@ -12,7 +12,7 @@ type ComponentProps = {
   className?: string;
 };
 
-function Image({
+const Image = forwardRef(({
   src,
   alt,
   priority,
@@ -21,7 +21,7 @@ function Image({
   blurDataURL,
   className,
   objectFit = "cover"
-}: ComponentProps) {
+}: ComponentProps, ref) => {
   return (
     <NextImage
       className={className}
@@ -35,6 +35,8 @@ function Image({
       blurDataURL={typeof src === "string" ? src : ("blurDataURL" in src && src?.blurDataURL) || ""}
     />
   );
-}
+});
+
+Image.displayName = "Image";
 
 export { Image };

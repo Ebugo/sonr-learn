@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { AppLayout } from '../../components';
 import React from "react";
 import {ProgramsList} from "../../components";
-import { getLessons } from '../../helpers';
+import { getLessons } from '../../utils';
 import { LessonProps } from '../../types';
 
 

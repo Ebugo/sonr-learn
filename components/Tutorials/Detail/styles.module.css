@@ -32,6 +32,13 @@
   font-weight: 400;
 }
 
+.container ul, .container ol, .container li {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  list-style-type: disc;
+}
+
 .container span.sub-text {
   color: var(--app-grey-200);
 }
@@ -56,6 +63,8 @@
   background: var(--app-blue-200);
   box-shadow: 0px 4px 8px -4px rgba(22, 34, 51, 0.12), 0px 16px 20px rgba(22, 34, 51, 0.08);
   border-radius: 5px;
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
 .container .reference h5 {
@@ -68,7 +77,7 @@
   color: var(--app-black-500);
 }
 
-.container .reference a:first-child, .container .reference a:first-child * {
+.container .reference a.top-header, .container .reference a.top-header * {
   font-family: var(--app-primary-font-bold);
   font-weight: 800;
   color: var(--app-blue-600);
@@ -90,6 +99,12 @@
   border-left: 7px solid var(--app-blue-600);
   border-radius: 3px;
   background: var(--app-blue-200);
+}
+
+.container .header {
+  display: block;
+  margin-top: 22px;
+  margin-bottom: 15px;
 }
 
 @media all and (min-width: 768px) {
