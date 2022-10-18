@@ -110,24 +110,28 @@ const TutorialsDetail: React.FC<{ mdxSource: MDXRemoteSerializeResult | any, hea
 					<hr className="mt-2 mb-5 md:mb-8" />
 
 					<div className="flex flex-col">
-						{headings.map((heading: any, i: number) => {
-							if (heading?.level <= 2) {
-								return (
-									<NextLink href={heading?.link || "#"} key={i}>
-										<a className={`${styles["top-header"]} mt-2 my-1 flex`}>
-											<LinkIcon />
-											<span className="ml-2">{heading?.text || ""}</span>
-										</a>
-									</NextLink>
-								)
-							} else {
-								return (
-									<NextLink href={heading?.link || "#"} key={i}>
-										<a href={heading?.link || "#"} className="my-1 ml-8">{heading?.text || ""}</a>
-									</NextLink>
-								)
-							}
-						})}
+						{
+							Array.isArray(headings) && headings.length > 0
+								? headings.map((heading: any, i: number) => {
+									if (heading?.level <= 2) {
+										return (
+											<NextLink href={heading?.link || "#"} key={i}>
+												<a className={`${styles["top-header"]} mt-2 my-1 flex`}>
+													<LinkIcon />
+													<span className="ml-2">{heading?.text || ""}</span>
+												</a>
+											</NextLink>
+										)
+									} else {
+										return (
+											<NextLink href={heading?.link || "#"} key={i}>
+												<a href={heading?.link || "#"} className="my-1 ml-8">{heading?.text || ""}</a>
+											</NextLink>
+										)
+									}
+								})
+								: <a className="my-1 ml-8">No reference.</a>
+						}
 					</div>
 				</div>
 			</section>
