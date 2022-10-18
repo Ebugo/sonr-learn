@@ -3,8 +3,8 @@ import Head from 'next/head';
 import { AppLayout } from '../../components';
 import React from "react";
 import {ProgramsDetail} from "../../components";
-import { getLessonPathData } from '../../helpers/getLessonPathData';
-import { getLessonData } from '../../helpers/getLessonData';
+import { getLessonPathData } from '../../utils/getLessonPathData';
+import { getLessonData } from '../../utils/getLessonData';
 import { LessonDetailProps } from '../../types';
 
 

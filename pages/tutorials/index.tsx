@@ -3,8 +3,8 @@ import Head from 'next/head';
 import { AppLayout } from '../../components';
 import React from "react";
 import { TutorialsList } from "../../components/Tutorials";
-import { Lesson, LessonProps } from '../../types';
-import { getLessons } from '../../helpers';
+import { LessonProps } from '../../types';
+import { getLessons } from '../../utils';
 
 
 const Tutorials: NextPage<LessonProps> = ({ lessons }) => {

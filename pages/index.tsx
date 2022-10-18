@@ -21,7 +21,7 @@ import { UpcomingEvents } from "../components/UpcomingEvents";
 import { SuggestedTutorials } from "../components/SuggestedTutorials";
 import FlickityComponent from 'react-flickity-component';
 import "flickity/css/flickity.css";
-import { getLessons } from '../helpers';
+import { getLessons } from '../utils';
 import { LessonProps } from '../types';
 
 const flickityOptions = {
