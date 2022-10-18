@@ -3,17 +3,12 @@ import Head from 'next/head';
 import { AppLayout } from '../../components';
 import React from "react";
 import { TutorialsDetail } from "../../components/Tutorials";
-import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
 import { LessonDetailProps } from '../../types';
-import { getLessonPathData } from '../../helpers/getLessonPathData';
-import { getLessonData } from '../../helpers/getLessonData';
+import { getLessonPathData } from '../../utils/getLessonPathData';
+import { getLessonData } from '../../utils/getLessonData';
 
 
-const TutorialDetail: NextPage<LessonDetailProps> = ({ mdxSource, slug }) => {
+const TutorialDetail: NextPage<LessonDetailProps> = ({ mdxSource, slug, headings }) => {
 	return (
 		<AppLayout>
 			<div className="container md:px-16 lg:px-28">
@@ -21,7 +16,7 @@ const TutorialDetail: NextPage<LessonDetailProps> = ({ mdxSource, slug }) => {
 					<title>Sonr Learn | Tutorials</title>
 				</Head>
 
-				<TutorialsDetail mdxSource={mdxSource} />
+				<TutorialsDetail mdxSource={mdxSource} headings={headings} />
 			</div >
 		</AppLayout>
 	);
@@ -40,6 +35,6 @@ export const getStaticPaths = async () => {
 // export const getStaticProps = async ({ params: { lesson, slug } }: any) => {
 export const getStaticProps = async ({ params: { slug } }: any) => {
 	const lesson = 'tutorials';
-	const mdxSource = await getLessonData(lesson, slug);
-	return { props: { mdxSource, lesson, slug } }
+	const {mdxSource, headings} = await getLessonData(lesson, slug);
+	return { props: { mdxSource, lesson, slug, headings } }
 }
